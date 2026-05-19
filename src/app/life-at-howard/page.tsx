@@ -6,8 +6,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Life at Howard",
-  description: "Discover the vibrant life beyond academics at Howard Convent — sports, arts, activities, and student leadership.",
+  title: "Life at Howard Convent — Activities, Sports & Arts",
+  description: "Discover the vibrant life beyond academics at Howard Convent — sports, arts, activities, and student leadership in Kanth, Moradabad.",
+  alternates: { canonical: "/life-at-howard" },
 };
 
 const categories = [

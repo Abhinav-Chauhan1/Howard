@@ -8,8 +8,9 @@ import Button from "@/components/ui/Button";
 import { UNSPLASH_IMAGES, SCHOOL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us — Howard Convent CBSE School, Kanth Moradabad",
   description: "Learn about Howard Convent Sr. Sec. School — our history, vision, mission, and philosophy of holistic education in Kanth, Moradabad.",
+  alternates: { canonical: "/about" },
 };
 
 const pillars = [

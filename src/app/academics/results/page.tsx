@@ -4,8 +4,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Board Results",
-  description: "CBSE board examination results for Howard Convent Sr. Sec. School — Class X and Class XII performance.",
+  title: "CBSE Board Results | Howard Convent School, Moradabad",
+  description: "CBSE board examination results for Howard Convent Sr. Sec. School — Class X and Class XII performance, Kanth, Moradabad.",
+  alternates: { canonical: "/academics/results" },
 };
 
 const years = ["2023–24", "2022–23", "2021–22"];

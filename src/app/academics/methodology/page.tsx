@@ -4,8 +4,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Academic Methodology",
+  title: "Academic Methodology | Howard Convent CBSE School, Kanth",
   description: "Howard Convent's child-centred teaching methodology — how we make learning meaningful, engaging, and effective for every student.",
+  alternates: { canonical: "/academics/methodology" },
 };
 
 const pillars = [

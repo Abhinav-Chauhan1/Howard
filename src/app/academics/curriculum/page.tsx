@@ -5,8 +5,9 @@ import AdmissionCTA from "@/components/ui/AdmissionCTA";
 import { STREAMS, CLASS_LEVELS, UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Curriculum",
+  title: "CBSE Curriculum | Howard Convent School, Kanth Moradabad",
   description: "Detailed curriculum overview for Howard Convent Sr. Sec. School — CBSE affiliated, from Pre-Primary to Senior Secondary.",
+  alternates: { canonical: "/academics/curriculum" },
 };
 
 const subjectsByLevel: { level: string; subjects: string[] }[] = [

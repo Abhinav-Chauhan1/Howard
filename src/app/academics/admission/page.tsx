@@ -6,8 +6,9 @@ import Button from "@/components/ui/Button";
 import { SCHOOL, DOCUMENTS_REQUIRED, UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Admission Procedure",
+  title: "Admission Procedure | Howard Convent CBSE School, Kanth",
   description: "How to apply for admission at Howard Convent Sr. Sec. School — step-by-step process, documents required, and contact information.",
+  alternates: { canonical: "/academics/admission" },
 };
 
 export default function AdmissionPage() {

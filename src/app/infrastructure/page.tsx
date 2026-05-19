@@ -5,8 +5,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { FACILITIES, UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Infrastructure",
-  description: "Explore the modern campus and world-class facilities at Howard Convent Sr. Sec. School, Kanth, Moradabad.",
+  title: "Campus & Infrastructure | Howard Convent School, Kanth",
+  description: "Explore the modern campus and facilities at Howard Convent Sr. Sec. School — smart classrooms, labs, library, sports ground, Kanth, Moradabad.",
+  alternates: { canonical: "/infrastructure" },
 };
 
 const GALLERY_IMAGES = [

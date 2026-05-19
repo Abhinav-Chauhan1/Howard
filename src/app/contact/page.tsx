@@ -4,8 +4,9 @@ import ContactForm from "./ContactForm";
 import { SCHOOL, UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
-  description: "Get in touch with Howard Convent Sr. Sec. School — address, phone, email, and contact form.",
+  title: "Contact Howard Convent School — Kanth, Moradabad, UP",
+  description: "Get in touch with Howard Convent Sr. Sec. School — address, phone, email, and contact form. Located in Kanth, Moradabad, Uttar Pradesh.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

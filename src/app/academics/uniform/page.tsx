@@ -4,8 +4,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { SCHOOL, UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Uniform",
-  description: "School uniform details for Howard Convent Sr. Sec. School students.",
+  title: "School Uniform | Howard Convent School, Kanth Moradabad",
+  description: "School uniform details for Howard Convent Sr. Sec. School students — dress code for all classes.",
+  alternates: { canonical: "/academics/uniform" },
 };
 
 export default function UniformPage() {

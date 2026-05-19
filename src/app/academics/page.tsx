@@ -7,8 +7,9 @@ import Button from "@/components/ui/Button";
 import { STREAMS, CLASS_LEVELS, UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Academics",
+  title: "Academics — CBSE Curriculum | Howard Convent, Kanth",
   description: "Howard Convent's academic programme — from Pre-Primary to Senior Secondary. Science, Commerce, and Humanities streams with CBSE curriculum.",
+  alternates: { canonical: "/academics" },
 };
 
 const classDetails = [

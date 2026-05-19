@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Howard Convent Sr. Sec. School | CBSE School in Kanth, Moradabad",
   description:
     "A CBSE-affiliated school committed to holistic education — nurturing knowledge, character, and compassion in every student. Kanth, Moradabad, UP.",
+  alternates: { canonical: "/" },
 };
 
 export default function Home() {

@@ -7,8 +7,9 @@ import Button from "@/components/ui/Button";
 import { SCHOOL, STREAMS, FAQ, UNSPLASH_IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Admissions 2025–26",
+  title: "Admissions 2025–26 | Howard Convent CBSE School, Kanth",
   description: "Apply for admission at Howard Convent Sr. Sec. School for the 2025–26 academic year. Limited seats available across all streams.",
+  alternates: { canonical: "/admissions" },
 };
 
 const WHY_HOWARD = [
