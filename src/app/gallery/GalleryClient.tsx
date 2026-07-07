@@ -12,6 +12,7 @@ const GALLERY_ITEMS = [
   { src: UNSPLASH_IMAGES.classroom, label: "Classroom", category: "Academics" },
   { src: UNSPLASH_IMAGES.sports, label: "Sports Day", category: "Sports" },
   { src: UNSPLASH_IMAGES.playground, label: "Playground", category: "Sports" },
+  { src: UNSPLASH_IMAGES.pool, label: "Swimming Pool", category: "Sports" },
   { src: UNSPLASH_IMAGES.arts, label: "Cultural Event", category: "Events" },
   { src: UNSPLASH_IMAGES.activities, label: "Co-curricular", category: "Events" },
   { src: UNSPLASH_IMAGES.council, label: "Students Council", category: "Events" },

@@ -17,6 +17,7 @@ const GALLERY_IMAGES = [
   { src: UNSPLASH_IMAGES.classroom, label: "Smart Classroom" },
   { src: UNSPLASH_IMAGES.playground, label: "Playground" },
   { src: UNSPLASH_IMAGES.sports, label: "Sports Ground" },
+  { src: UNSPLASH_IMAGES.pool, label: "Swimming Pool" },
   { src: UNSPLASH_IMAGES.campus3, label: "Campus View" },
   { src: UNSPLASH_IMAGES.campus4, label: "School Block" },
   { src: UNSPLASH_IMAGES.campus5, label: "Campus Grounds" },
