@@ -18,6 +18,7 @@ const GALLERY_ITEMS = [
   { src: UNSPLASH_IMAGES.council, label: "Students Council", category: "Events" },
   { src: UNSPLASH_IMAGES.campus2, label: "School Building", category: "Campus" },
   { src: UNSPLASH_IMAGES.campus3, label: "Campus View", category: "Campus" },
+  { src: UNSPLASH_IMAGES.office, label: "Reception & Office", category: "Campus" },
   { src: UNSPLASH_IMAGES.gallery1, label: "Student Activity", category: "Events" },
   { src: UNSPLASH_IMAGES.gallery2, label: "Sports Event", category: "Sports" },
   { src: UNSPLASH_IMAGES.gallery3, label: "Class Room", category: "Academics" },

@@ -22,6 +22,7 @@ const GALLERY_IMAGES = [
   { src: UNSPLASH_IMAGES.campus4, label: "School Block" },
   { src: UNSPLASH_IMAGES.campus5, label: "Campus Grounds" },
   { src: UNSPLASH_IMAGES.campus2, label: "Building" },
+  { src: UNSPLASH_IMAGES.office, label: "Reception & Office" },
 ];
 
 export default function InfrastructurePage() {
