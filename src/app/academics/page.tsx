@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AdmissionCTA from "@/components/ui/AdmissionCTA";
 import Button from "@/components/ui/Button";
-import { STREAMS, CLASS_LEVELS, UNSPLASH_IMAGES } from "@/lib/constants";
+import { STREAMS, IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Academics — CBSE Curriculum | Howard Convent, Kanth",
+  title: { absolute: "Academics — CBSE Curriculum | Howard Convent, Kanth" },
   description: "Howard Convent's academic programme — from Pre-Primary to Senior Secondary. Science, Commerce, and Humanities streams with CBSE curriculum.",
   alternates: { canonical: "/academics" },
 };
@@ -51,7 +50,7 @@ export default function AcademicsPage() {
       <PageHero
         title="Academics"
         subtitle="A curriculum designed for depth, curiosity, and real-world readiness."
-        image={UNSPLASH_IMAGES.classroom}
+        image={IMAGES.classroom}
         breadcrumbs={[{ label: "Academics", href: "/academics" }]}
       />
 

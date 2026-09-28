@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
-import { SCHOOL, UNSPLASH_IMAGES } from "@/lib/constants";
+import { SCHOOL, IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Career Counseling",
+  title: { absolute: "Career Counseling | Howard Convent School, Kanth" },
+  alternates: { canonical: "/life-at-howard/counseling" },
   description: "Career guidance and counseling programme at Howard Convent Sr. Sec. School — helping students make informed decisions about their future.",
 };
 
@@ -34,7 +35,7 @@ export default function CounselingPage() {
       <PageHero
         title="Career Counseling"
         subtitle="Helping students discover their path with confidence."
-        image={UNSPLASH_IMAGES.counseling}
+        image={IMAGES.counseling}
         breadcrumbs={[
           { label: "Life at Howard", href: "/life-at-howard" },
           { label: "Career Counseling", href: "/life-at-howard/counseling" },

@@ -4,11 +4,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Timeline from "@/components/ui/Timeline";
 import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
-import { SCHOOL, STREAMS, FAQ, UNSPLASH_IMAGES } from "@/lib/constants";
+import { SCHOOL, STREAMS, FAQ, IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Admissions 2025–26 | Howard Convent CBSE School, Kanth",
-  description: "Apply for admission at Howard Convent Sr. Sec. School for the 2025–26 academic year. Limited seats available across all streams.",
+  title: { absolute: `Admissions ${SCHOOL.admissionSession} | Howard Convent CBSE School, Kanth` },
+  description: `Apply for admission at Howard Convent Sr. Sec. School for the ${SCHOOL.admissionSession} academic year. Limited seats available across all streams.`,
   alternates: { canonical: "/admissions" },
 };
 
@@ -40,8 +40,8 @@ export default function AdmissionsPage() {
     <>
       <PageHero
         title="Begin Your Journey at Howard Convent"
-        subtitle="Admissions Open for 2025–26 · Limited Seats Available"
-        image={UNSPLASH_IMAGES.campus1}
+        subtitle={`Admissions Open for ${SCHOOL.admissionSession} · Limited Seats Available`}
+        image={IMAGES.campus1}
         breadcrumbs={[{ label: "Admissions", href: "/admissions" }]}
       />
 
@@ -181,7 +181,7 @@ export default function AdmissionsPage() {
             className="text-white/60 text-lg mb-10 max-w-xl mx-auto"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Seats are limited. Reach out today to begin the admission process for 2025–26.
+            Seats are limited. Reach out today to begin the admission process for {SCHOOL.admissionSession}.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href={SCHOOL.whatsapp} variant="gold" external>

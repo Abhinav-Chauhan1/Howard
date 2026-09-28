@@ -18,7 +18,7 @@ export default function AdmissionCTA() {
           className="text-white text-5xl md:text-7xl font-normal mb-4 leading-tight"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Admissions Open 2025–26
+          Admissions Open {SCHOOL.admissionSession}
         </h2>
         <p
           className="text-white/60 text-lg mb-10 max-w-xl mx-auto"

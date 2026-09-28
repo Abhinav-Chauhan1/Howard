@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { NAV_LINKS, SCHOOL, UNSPLASH_IMAGES } from "@/lib/constants";
+import { NAV_LINKS, SCHOOL, IMAGES } from "@/lib/constants";
 import Image from "next/image";
 
 gsap.registerPlugin(useGSAP);
@@ -145,7 +145,7 @@ export default function OverlayMenu({ isOpen, onClose }: OverlayMenuProps) {
           </p>
           <div className="relative w-full h-64 overflow-hidden rounded-sm">
             <Image
-              src={UNSPLASH_IMAGES.campus1}
+              src={IMAGES.campus1}
               alt="Howard Convent Campus"
               fill
               className="object-cover opacity-80"

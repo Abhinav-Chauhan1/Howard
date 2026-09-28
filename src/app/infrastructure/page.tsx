@@ -2,27 +2,24 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { FACILITIES, UNSPLASH_IMAGES } from "@/lib/constants";
+import { FACILITIES, IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Campus & Infrastructure | Howard Convent School, Kanth",
+  title: { absolute: "Campus & Infrastructure | Howard Convent School, Kanth" },
   description: "Explore the modern campus and facilities at Howard Convent Sr. Sec. School — smart classrooms, labs, library, sports ground, Kanth, Moradabad.",
   alternates: { canonical: "/infrastructure" },
 };
 
 const GALLERY_IMAGES = [
-  { src: UNSPLASH_IMAGES.campus1, label: "Main Campus" },
-  { src: UNSPLASH_IMAGES.library, label: "Library" },
-  { src: UNSPLASH_IMAGES.lab, label: "Science Lab" },
-  { src: UNSPLASH_IMAGES.classroom, label: "Smart Classroom" },
-  { src: UNSPLASH_IMAGES.playground, label: "Playground" },
-  { src: UNSPLASH_IMAGES.sports, label: "Sports Ground" },
-  { src: UNSPLASH_IMAGES.pool, label: "Swimming Pool" },
-  { src: UNSPLASH_IMAGES.campus3, label: "Campus View" },
-  { src: UNSPLASH_IMAGES.campus4, label: "School Block" },
-  { src: UNSPLASH_IMAGES.campus5, label: "Campus Grounds" },
-  { src: UNSPLASH_IMAGES.campus2, label: "Building" },
-  { src: UNSPLASH_IMAGES.office, label: "Reception & Office" },
+  { src: IMAGES.campus1, label: "Main Campus" },
+  { src: IMAGES.computerLab, label: "Computer Lab" },
+  { src: IMAGES.pool, label: "Swimming Pool" },
+  { src: IMAGES.campus5, label: "Campus Grounds" },
+  { src: IMAGES.campus2, label: "School Building" },
+  { src: IMAGES.campus3, label: "Campus View" },
+  { src: IMAGES.office, label: "Reception & Office" },
+  { src: IMAGES.classroom, label: "Student Activities" },
+  { src: IMAGES.activities, label: "Poster Exhibition" },
 ];
 
 export default function InfrastructurePage() {
@@ -31,7 +28,7 @@ export default function InfrastructurePage() {
       <PageHero
         title="Our Campus"
         subtitle="A space designed to inspire learning in every corner."
-        image={UNSPLASH_IMAGES.campus1}
+        image={IMAGES.campus1}
         breadcrumbs={[{ label: "Infrastructure", href: "/infrastructure" }]}
       />
 

@@ -3,10 +3,11 @@ import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import QuotePull from "@/components/ui/QuotePull";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Sports & Athletics",
+  title: { absolute: "Sports & Athletics | Howard Convent School, Kanth" },
+  alternates: { canonical: "/life-at-howard/sports" },
   description: "Howard Convent's comprehensive sports programme — building fitness, teamwork, and competitive excellence.",
 };
 
@@ -21,7 +22,7 @@ export default function SportsPage() {
       <PageHero
         title="Athletics & Sports"
         subtitle="Strength, discipline, and the spirit of play."
-        image={UNSPLASH_IMAGES.sports}
+        image={IMAGES.sports}
         breadcrumbs={[
           { label: "Life at Howard", href: "/life-at-howard" },
           { label: "Sports", href: "/life-at-howard/sports" },
@@ -70,9 +71,14 @@ export default function SportsPage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {[UNSPLASH_IMAGES.sports, UNSPLASH_IMAGES.playground, UNSPLASH_IMAGES.campus1, UNSPLASH_IMAGES.campus5].map((img, i) => (
-                <div key={i} className="relative h-48 overflow-hidden rounded-sm">
-                  <Image src={img} alt={`Sports ${i + 1}`} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
+              {[
+                { src: IMAGES.campus5, alt: "Open grounds on the Howard Convent campus" },
+                { src: IMAGES.pool, alt: "On-campus swimming pool" },
+                { src: IMAGES.campus1, alt: "Main gate and front of the school" },
+                { src: IMAGES.campus2, alt: "School building and forecourt" },
+              ].map((img) => (
+                <div key={img.src} className="relative h-48 overflow-hidden rounded-sm">
+                  <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
                 </div>
               ))}
             </div>

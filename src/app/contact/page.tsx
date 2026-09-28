@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import ContactForm from "./ContactForm";
-import { SCHOOL, UNSPLASH_IMAGES } from "@/lib/constants";
+import { SCHOOL, IMAGES } from "@/lib/constants";
+import { SOCIAL_LINKS } from "@/components/ui/SocialIcons";
 
 export const metadata: Metadata = {
-  title: "Contact Howard Convent School — Kanth, Moradabad, UP",
+  title: { absolute: "Contact Howard Convent School — Kanth, Moradabad, UP" },
   description: "Get in touch with Howard Convent Sr. Sec. School — address, phone, email, and contact form. Located in Kanth, Moradabad, Uttar Pradesh.",
   alternates: { canonical: "/contact" },
 };
@@ -15,7 +16,7 @@ export default function ContactPage() {
       <PageHero
         title="Get in Touch"
         subtitle="We'd love to hear from you."
-        image={UNSPLASH_IMAGES.contact}
+        image={IMAGES.contact}
         breadcrumbs={[{ label: "Contact", href: "/contact" }]}
       />
 
@@ -92,6 +93,27 @@ export default function ContactPage() {
                       >
                         Chat with us on WhatsApp →
                       </a>
+                    ),
+                  },
+                  {
+                    label: "Follow Us",
+                    icon: "🌐",
+                    content: (
+                      <div className="flex flex-wrap gap-x-5 gap-y-2">
+                        {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+                          <a
+                            key={label}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-[var(--accent)] hover:underline text-sm"
+                            style={{ fontFamily: "var(--font-body)" }}
+                          >
+                            <Icon />
+                            {label}
+                          </a>
+                        ))}
+                      </div>
                     ),
                   },
                 ].map((item, i) => (

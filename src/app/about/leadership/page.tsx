@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { LEADERSHIP, UNSPLASH_IMAGES } from "@/lib/constants";
+import { LEADERSHIP, IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Leadership",
+  title: { absolute: "Leadership | Howard Convent CBSE School, Kanth" },
+  alternates: { canonical: "/about/leadership" },
   description: "Meet the visionary leadership team at Howard Convent Sr. Sec. School — guiding the institution towards excellence.",
 };
 
@@ -15,7 +16,7 @@ export default function LeadershipPage() {
       <PageHero
         title="Our Leadership"
         subtitle="The people who make Howard Convent what it is."
-        image={UNSPLASH_IMAGES.campus5}
+        image={IMAGES.campus5}
         breadcrumbs={[
           { label: "About", href: "/about" },
           { label: "Leadership", href: "/about/leadership" },

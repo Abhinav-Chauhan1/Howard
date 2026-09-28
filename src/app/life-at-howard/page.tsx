@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Life at Howard Convent — Activities, Sports & Arts",
+  title: { absolute: "Life at Howard Convent — Activities, Sports & Arts" },
   description: "Discover the vibrant life beyond academics at Howard Convent — sports, arts, activities, and student leadership in Kanth, Moradabad.",
   alternates: { canonical: "/life-at-howard" },
 };
@@ -15,25 +15,25 @@ const categories = [
   {
     title: "Athletics & Sports",
     description: "From cricket to football to athletics — our sports programme builds fitness, discipline, and team spirit.",
-    image: UNSPLASH_IMAGES.sports,
+    image: IMAGES.sports,
     href: "/life-at-howard/sports",
   },
   {
     title: "Performing Arts & Music",
     description: "Dance, drama, music, and visual arts — creative expression at the heart of the Howard experience.",
-    image: UNSPLASH_IMAGES.arts,
+    image: IMAGES.arts,
     href: "/life-at-howard/arts",
   },
   {
     title: "Co-curricular Activities",
     description: "Clubs, competitions, and community initiatives that broaden every student's horizons.",
-    image: UNSPLASH_IMAGES.activities,
+    image: IMAGES.activities,
     href: "/life-at-howard/activities",
   },
   {
     title: "Students Council",
     description: "A student-led body that cultivates leadership, responsibility, and a sense of service.",
-    image: UNSPLASH_IMAGES.council,
+    image: IMAGES.council,
     href: "/life-at-howard/council",
   },
 ];
@@ -44,7 +44,7 @@ export default function LifeAtHowardPage() {
       <PageHero
         title="Life at Howard"
         subtitle="Where learning happens everywhere — in the classroom and beyond."
-        image={UNSPLASH_IMAGES.activities}
+        image={IMAGES.activities}
         breadcrumbs={[{ label: "Life at Howard", href: "/life-at-howard" }]}
       />
 

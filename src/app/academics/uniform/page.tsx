@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { SCHOOL, UNSPLASH_IMAGES } from "@/lib/constants";
+import { SCHOOL, IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "School Uniform | Howard Convent School, Kanth Moradabad",
+  title: { absolute: "School Uniform | Howard Convent School, Kanth Moradabad" },
   description: "School uniform details for Howard Convent Sr. Sec. School students — dress code for all classes.",
   alternates: { canonical: "/academics/uniform" },
 };
@@ -15,7 +15,7 @@ export default function UniformPage() {
       <PageHero
         title="School Uniform"
         subtitle="Dress code and uniform guidelines."
-        image={UNSPLASH_IMAGES.campus3}
+        image={IMAGES.campus3}
         breadcrumbs={[
           { label: "Academics", href: "/academics" },
           { label: "Uniform", href: "/academics/uniform" },

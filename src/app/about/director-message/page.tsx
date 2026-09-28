@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Director's Message",
+  title: { absolute: "Director's Message | Howard Convent School, Kanth" },
+  alternates: { canonical: "/about/director-message" },
   description: "A message from Deepesh Singh, Director of Howard Convent Sr. Sec. School, on his vision for education and the school's future.",
 };
 
@@ -14,7 +15,7 @@ export default function DirectorMessagePage() {
       <PageHero
         title="Director's Message"
         subtitle="The vision behind Howard Convent."
-        image={UNSPLASH_IMAGES.campus4}
+        image={IMAGES.campus3}
         breadcrumbs={[
           { label: "About", href: "/about" },
           { label: "Director's Message", href: "/about/director-message" },
@@ -28,7 +29,7 @@ export default function DirectorMessagePage() {
             <div className="flex-shrink-0">
               <div className="relative w-full aspect-[3/4] overflow-hidden rounded-sm mb-5">
                 <Image
-                  src={UNSPLASH_IMAGES.director}
+                  src={IMAGES.director}
                   alt="Deepesh Singh, Director"
                   fill
                   className="object-cover object-top"

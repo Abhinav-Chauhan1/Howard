@@ -12,11 +12,15 @@ export default function StatCounter() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const counterRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
+  // The server renders the final values so crawlers and no-JS visitors see
+  // real numbers. Once hydrated, reset to 0 and count up when scrolled into view.
   useGSAP(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     STATS.forEach((stat, i) => {
       const el = counterRefs.current[i];
       if (!el) return;
       const obj = { val: 0 };
+      el.textContent = 0 + stat.suffix;
       gsap.to(obj, {
         val: stat.value,
         duration: 2,
@@ -54,7 +58,7 @@ export default function StatCounter() {
                 <span
                   ref={(el) => { counterRefs.current[i] = el; }}
                 >
-                  0{stat.suffix}
+                  {`${stat.value}${stat.suffix}`}
                 </span>
               </div>
               <p

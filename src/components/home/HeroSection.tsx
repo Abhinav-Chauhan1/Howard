@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { SCHOOL, UNSPLASH_IMAGES } from "@/lib/constants";
+import { SCHOOL, IMAGES } from "@/lib/constants";
 
 gsap.registerPlugin(useGSAP);
 
@@ -51,7 +51,7 @@ export default function HeroSection() {
       {/* Background */}
       <div ref={imgRef} className="absolute inset-0">
         <Image
-          src={UNSPLASH_IMAGES.hero}
+          src={IMAGES.hero}
           alt="Howard Convent School Campus"
           fill
           sizes="100vw"
@@ -78,7 +78,7 @@ export default function HeroSection() {
           className="text-white font-normal leading-[1.0] mb-8 overflow-hidden"
           style={{ fontFamily: "var(--font-display)", fontSize: "clamp(48px, 8vw, 110px)" }}
         >
-          <span ref={line1Ref} className="block">Where Knowledge</span>
+          <span ref={line1Ref} className="block">Where Knowledge</span>{" "}
           <span ref={line2Ref} className="block text-[var(--accent)]">Becomes Character</span>
         </h1>
 

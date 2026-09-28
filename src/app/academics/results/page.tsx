@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "CBSE Board Results | Howard Convent School, Moradabad",
+  title: { absolute: "CBSE Board Results | Howard Convent School, Moradabad" },
   description: "CBSE board examination results for Howard Convent Sr. Sec. School — Class X and Class XII performance, Kanth, Moradabad.",
   alternates: { canonical: "/academics/results" },
 };
@@ -17,7 +17,7 @@ export default function ResultsPage() {
       <PageHero
         title="Board Results"
         subtitle="A track record of academic excellence."
-        image={UNSPLASH_IMAGES.campus4}
+        image={IMAGES.campus2}
         breadcrumbs={[
           { label: "Academics", href: "/academics" },
           { label: "Results", href: "/academics/results" },

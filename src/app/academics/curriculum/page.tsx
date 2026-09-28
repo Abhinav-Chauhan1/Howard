@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AdmissionCTA from "@/components/ui/AdmissionCTA";
-import { STREAMS, CLASS_LEVELS, UNSPLASH_IMAGES } from "@/lib/constants";
+import { STREAMS, IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "CBSE Curriculum | Howard Convent School, Kanth Moradabad",
+  title: { absolute: "CBSE Curriculum | Howard Convent School, Kanth Moradabad" },
   description: "Detailed curriculum overview for Howard Convent Sr. Sec. School — CBSE affiliated, from Pre-Primary to Senior Secondary.",
   alternates: { canonical: "/academics/curriculum" },
 };
@@ -70,7 +70,7 @@ export default function CurriculumPage() {
       <PageHero
         title="Curriculum"
         subtitle="A detailed look at what we teach and how we teach it."
-        image={UNSPLASH_IMAGES.classroom}
+        image={IMAGES.classroom}
         breadcrumbs={[
           { label: "Academics", href: "/academics" },
           { label: "Curriculum", href: "/academics/curriculum" },

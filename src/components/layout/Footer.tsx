@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { SCHOOL } from "@/lib/constants";
+import { SOCIAL_LINKS } from "@/components/ui/SocialIcons";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -47,15 +48,29 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-6 text-[var(--text)]/70" style={{ fontFamily: "var(--font-body)" }}>
               {SCHOOL.tagline}. A CBSE-affiliated institution committed to holistic education in Kanth, Moradabad.
             </p>
-            <a
-              href={SCHOOL.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all hover:brightness-90"
-              style={{ backgroundColor: "var(--accent)", color: "white", fontFamily: "var(--font-heading)" }}
-            >
-              WhatsApp Us
-            </a>
+            <div className="flex items-center gap-3">
+              <a
+                href={SCHOOL.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all hover:brightness-90"
+                style={{ backgroundColor: "var(--accent)", color: "white", fontFamily: "var(--font-heading)" }}
+              >
+                WhatsApp Us
+              </a>
+              {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${SCHOOL.shortName} on ${label}`}
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--text)]/20 text-[var(--text)]/75 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors"
+                >
+                  <Icon />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Col 2: Quick Links */}
