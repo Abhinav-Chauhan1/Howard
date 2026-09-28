@@ -23,7 +23,7 @@ export const SCHOOL = {
   whatsapp: "https://wa.me/919319985501",
   facebook: "https://www.facebook.com/howardconventschool",
   instagram: "https://www.instagram.com/howardconventschool/",
-  admissionSession: "2027–28",
+  admissionSession: "2026–27",
   hours: "9:00 AM – 4:00 PM (Mon–Sat)",
   builtBy: "VisibleDot",
   builtByUrl: "https://visibledot.com",
