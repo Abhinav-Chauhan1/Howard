@@ -121,7 +121,7 @@ export default function GalleryClient() {
           aria-label={filtered[lightboxIndex].label}
         >
           <button
-            className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors"
+            className="absolute z-10 top-6 right-6 text-white/70 hover:text-white transition-colors"
             onClick={close}
             aria-label="Close lightbox"
           >
@@ -133,7 +133,7 @@ export default function GalleryClient() {
           {filtered.length > 1 && (
             <>
               <button
-                className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2"
+                className="absolute z-10 left-3 md:left-6 top-1/2 -translate-y-1/2 rounded-full bg-black/40 text-white/80 hover:text-white transition-colors p-2"
                 onClick={(e) => {
                   e.stopPropagation();
                   step(-1);
@@ -145,7 +145,7 @@ export default function GalleryClient() {
                 </svg>
               </button>
               <button
-                className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2"
+                className="absolute z-10 right-3 md:right-6 top-1/2 -translate-y-1/2 rounded-full bg-black/40 text-white/80 hover:text-white transition-colors p-2"
                 onClick={(e) => {
                   e.stopPropagation();
                   step(1);
