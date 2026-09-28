@@ -1,39 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import { IMAGES } from "@/lib/constants";
+import { GALLERY_CATEGORIES, GALLERY_ITEMS } from "@/data/gallery";
 
-const GALLERY_ITEMS = [
-  { src: IMAGES.campus1, label: "Main Campus", category: "Campus", alt: "Main gate and front of Howard Convent School, Kanth" },
-  { src: IMAGES.arts, label: "Poster Making", category: "Events", alt: "Students drawing posters at the Integrity – A Way of Life poster-making competition" },
-  { src: IMAGES.computerLab, label: "Computer Lab", category: "Academics", alt: "Students working at desks in the school computer lab" },
-  { src: IMAGES.campus2, label: "School Building", category: "Campus", alt: "Howard Convent School building with the school name board" },
-  { src: IMAGES.pool, label: "Swimming Pool", category: "Sports", alt: "On-campus swimming pool at Howard Convent School" },
-  { src: IMAGES.activities, label: "Poster Exhibition", category: "Events", alt: "Students holding up their integrity posters in the school hall" },
-  { src: IMAGES.council, label: "Certificate Presentation", category: "Events", alt: "Teacher presenting a certificate to a student at the school entrance" },
-  { src: IMAGES.campus5, label: "Campus Grounds", category: "Sports", alt: "Open grounds and tree-lined lawn on the Howard Convent campus" },
-  { src: IMAGES.classroom, label: "Poster Making", category: "Events", alt: "Students sketching at a long table during the poster-making competition" },
-  { src: IMAGES.diya1, label: "Diya Decoration", category: "Events", alt: "Lit diyas arranged in a pattern on the school floor" },
-  { src: IMAGES.campus3, label: "Campus View", category: "Campus", alt: "Side view of the Howard Convent School building" },
-  { src: IMAGES.about, label: "Young Artists", category: "Events", alt: "Students displaying their posters in front of the Howard Convent School wall" },
-  { src: IMAGES.office, label: "Reception & Office", category: "Campus", alt: "School reception and front office" },
-  { src: IMAGES.posterMaking2, label: "Ideas Taking Shape", category: "Events", alt: "Students colouring their posters during the competition" },
-  { src: IMAGES.diya2, label: "Diya Decoration", category: "Events", alt: "Students lighting diyas arranged on the floor in front of the school backdrop" },
-  { src: IMAGES.posterGroup2, label: "Our Budding Artists", category: "Events", alt: "Group of students with their integrity posters outside the school" },
-];
-
-const FILTERS = ["All", "Campus", "Events", "Sports", "Academics"];
+const FILTERS = ["All", ...GALLERY_CATEGORIES] as const;
 
 export default function GalleryClient() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState<(typeof FILTERS)[number]>("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const filtered =
     activeFilter === "All"
       ? GALLERY_ITEMS
       : GALLERY_ITEMS.filter((item) => item.category === activeFilter);
+
+  const count = (filter: (typeof FILTERS)[number]) =>
+    filter === "All" ? GALLERY_ITEMS.length : GALLERY_ITEMS.filter((item) => item.category === filter).length;
+
+  const close = useCallback(() => setLightboxIndex(null), []);
+  const step = useCallback(
+    (dir: 1 | -1) =>
+      setLightboxIndex((i) => (i === null ? i : (i + dir + filtered.length) % filtered.length)),
+    [filtered.length]
+  );
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowRight") step(1);
+      if (e.key === "ArrowLeft") step(-1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxIndex, close, step]);
 
   return (
     <>
@@ -50,7 +53,11 @@ export default function GalleryClient() {
             {FILTERS.map((filter) => (
               <button
                 key={filter}
-                onClick={() => setActiveFilter(filter)}
+                onClick={() => {
+                  setActiveFilter(filter);
+                  setLightboxIndex(null);
+                }}
+                aria-pressed={activeFilter === filter}
                 className="px-5 py-2 text-sm font-medium transition-all"
                 style={{
                   fontFamily: "var(--font-heading)",
@@ -60,6 +67,7 @@ export default function GalleryClient() {
                 data-cursor
               >
                 {filter}
+                <span style={{ opacity: 0.6, marginLeft: 6 }}>{count(filter)}</span>
               </button>
             ))}
           </div>
@@ -67,15 +75,16 @@ export default function GalleryClient() {
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
             {filtered.map((item, i) => (
               <div
-                key={i}
+                key={item.src}
                 className="relative overflow-hidden rounded-sm break-inside-avoid cursor-pointer group"
                 onClick={() => setLightboxIndex(i)}
               >
-                <div className="relative" style={{ paddingBottom: i % 3 === 0 ? "130%" : i % 3 === 1 ? "75%" : "100%" }}>
+                <div className="relative" style={{ aspectRatio: `${item.width} / ${item.height}` }}>
                   <Image
                     src={item.src}
                     alt={item.alt}
                     fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div
@@ -98,7 +107,7 @@ export default function GalleryClient() {
             className="text-center mt-12 text-sm"
             style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.45 }}
           >
-            More photos coming soon
+            New photos are added after every school event
           </p>
         </div>
       </section>
@@ -106,11 +115,14 @@ export default function GalleryClient() {
       {lightboxIndex !== null && (
         <div
           className="lightbox-overlay"
-          onClick={() => setLightboxIndex(null)}
+          onClick={close}
+          role="dialog"
+          aria-modal="true"
+          aria-label={filtered[lightboxIndex].label}
         >
           <button
             className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors"
-            onClick={() => setLightboxIndex(null)}
+            onClick={close}
             aria-label="Close lightbox"
           >
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -118,6 +130,34 @@ export default function GalleryClient() {
               <line x1="26" y1="6" x2="6" y2="26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </button>
+          {filtered.length > 1 && (
+            <>
+              <button
+                className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  step(-1);
+                }}
+                aria-label="Previous photo"
+              >
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <polyline points="20,6 10,16 20,26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              <button
+                className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  step(1);
+                }}
+                aria-label="Next photo"
+              >
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <polyline points="12,6 22,16 12,26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </>
+          )}
           <div
             className="relative max-w-4xl max-h-[85vh] w-full mx-4"
             onClick={(e) => e.stopPropagation()}
@@ -125,8 +165,9 @@ export default function GalleryClient() {
             <Image
               src={filtered[lightboxIndex].src}
               alt={filtered[lightboxIndex].alt}
-              width={1200}
-              height={800}
+              width={filtered[lightboxIndex].width}
+              height={filtered[lightboxIndex].height}
+              sizes="(min-width: 1024px) 896px, 100vw"
               className="object-contain w-full h-full max-h-[85vh]"
             />
             <div className="absolute bottom-4 left-4">
