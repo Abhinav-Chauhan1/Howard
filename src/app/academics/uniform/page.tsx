@@ -36,7 +36,7 @@ export default function UniformPage() {
             >
               <p
                 className="text-sm font-semibold mb-2"
-                style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+                style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
               >
                 Note from Administration
               </p>
@@ -64,7 +64,7 @@ export default function UniformPage() {
                   </h3>
                   <p
                     className="text-sm italic"
-                    style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.5 }}
+                    style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}
                   >
                     [Details to be updated by school administration]
                   </p>
@@ -83,14 +83,14 @@ export default function UniformPage() {
                 Uniform Provider
               </p>
               <p
-                className="text-sm leading-relaxed"
-                style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.65 }}
+                className="text-sm leading-relaxed text-[var(--text)]/75"
+                style={{ fontFamily: "var(--font-body)" }}
               >
                 Information about the authorised uniform provider and purchase locations will be available
                 from the school office. Please contact us at{" "}
                 <a
                   href={`tel:${SCHOOL.phone}`}
-                  className="text-[var(--accent)]"
+                  className="text-[var(--accent-ink)] font-medium underline underline-offset-2"
                 >
                   {SCHOOL.phone}
                 </a>{" "}
@@ -99,7 +99,7 @@ export default function UniformPage() {
                   href={SCHOOL.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--accent)]"
+                  className="text-[var(--accent-ink)] font-medium underline underline-offset-2"
                 >
                   WhatsApp
                 </a>{" "}

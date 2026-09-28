@@ -66,7 +66,7 @@ export default function AcademicsOverview() {
               </h3>
               <p
                 className="text-sm leading-relaxed mb-5"
-                style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.6 }}
+                style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}
               >
                 {stream.description}
               </p>
@@ -89,7 +89,7 @@ export default function AcademicsOverview() {
                     className="text-xs px-2.5 py-1 rounded-full"
                     style={{
                       backgroundColor: "var(--accent)",
-                      color: "white",
+                      color: "var(--on-accent)",
                       fontFamily: "var(--font-heading)",
                     }}
                   >
@@ -119,7 +119,7 @@ export default function AcademicsOverview() {
               </p>
               <p
                 className="text-xs"
-                style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.5 }}
+                style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}
               >
                 {level.range}
               </p>

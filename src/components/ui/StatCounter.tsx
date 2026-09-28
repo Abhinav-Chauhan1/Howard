@@ -66,7 +66,7 @@ export default function StatCounter() {
                 style={{
                   fontFamily: "var(--font-heading)",
                   color: "var(--text)",
-                  opacity: 0.6,
+                  opacity: 0.7,
                 }}
               >
                 {stat.label}

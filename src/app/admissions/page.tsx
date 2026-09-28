@@ -166,7 +166,7 @@ export default function AdmissionsPage() {
       >
         <div className="max-w-screen-xl mx-auto px-6 text-center">
           <span
-            className="text-[var(--accent)] text-xs tracking-[0.2em] uppercase font-semibold mb-4 block"
+            className="text-[var(--accent-soft)] text-xs tracking-[0.2em] uppercase font-semibold mb-4 block"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Admissions Open
@@ -178,7 +178,7 @@ export default function AdmissionsPage() {
             Ready to Join Howard?
           </h2>
           <p
-            className="text-white/60 text-lg mb-10 max-w-xl mx-auto"
+            className="text-white/75 text-lg mb-10 max-w-xl mx-auto"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Seats are limited. Reach out today to begin the admission process for {SCHOOL.admissionSession}.
@@ -192,7 +192,7 @@ export default function AdmissionsPage() {
             </Button>
           </div>
           <p
-            className="text-white/30 text-xs mt-8"
+            className="text-white/75 text-xs mt-8"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Office Hours: {SCHOOL.hours}

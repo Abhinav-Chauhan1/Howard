@@ -24,7 +24,7 @@ export default function Timeline() {
                 className="text-sm font-bold"
                 style={{
                   fontFamily: "var(--font-heading)",
-                  color: "var(--accent)",
+                  color: "var(--accent-ink)",
                 }}
               >
                 {step.step}
@@ -43,7 +43,7 @@ export default function Timeline() {
                 {step.title}
               </h3>
               <p
-                className="text-[var(--text)]/60 leading-relaxed"
+                className="text-[var(--text)]/70 leading-relaxed"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {step.description}

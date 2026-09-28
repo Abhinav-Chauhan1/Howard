@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const TBF = () => <span className="text-gray-400">—</span>;
+const TBF = () => <span className="text-gray-500">—</span>;
 
 const DOC_BASE = "/mpd/Documents%20%26%20Certificates";
 
@@ -103,7 +103,7 @@ function DocRow({ label, available, link, note }: { label: string; available: bo
         ) : available === null ? (
           <TBF />
         ) : (
-          <span className="text-gray-400 text-xs">—</span>
+          <span className="text-gray-500 text-xs">—</span>
         )}
         {note && <span className="text-gray-500 text-xs ml-2">({note})</span>}
       </td>
@@ -143,7 +143,7 @@ export default function MpdContent() {
         <div className="no-print flex justify-end mb-12">
           <button
             onClick={() => window.print()}
-            className="flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white rounded transition-colors hover:brightness-90"
+            className="flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-[var(--on-accent)] rounded transition-colors hover:brightness-90"
             style={{ backgroundColor: "var(--accent)", fontFamily: "var(--font-heading)" }}
           >
             🖨️ Print / Save as PDF
@@ -226,12 +226,12 @@ export default function MpdContent() {
             <tr className="even:bg-gray-50">
               <td className="border border-gray-300 px-3 py-2">Fee Structure of the School (Class-wise)</td>
               <td className="border border-gray-300 px-3 py-2 text-center font-semibold text-amber-700"><TBF /></td>
-              <td className="border border-gray-300 px-3 py-2 text-gray-400 text-xs">Upload fee structure document</td>
+              <td className="border border-gray-300 px-3 py-2 text-gray-500 text-xs">Upload fee structure document</td>
             </tr>
             <tr className="even:bg-gray-50">
               <td className="border border-gray-300 px-3 py-2">Annual Academic Calendar</td>
               <td className="border border-gray-300 px-3 py-2 text-center font-semibold text-amber-700"><TBF /></td>
-              <td className="border border-gray-300 px-3 py-2 text-gray-400 text-xs">Upload academic calendar</td>
+              <td className="border border-gray-300 px-3 py-2 text-gray-500 text-xs">Upload academic calendar</td>
             </tr>
             <tr className="even:bg-gray-50">
               <td className="border border-gray-300 px-3 py-2">List of School Management Committee (SMC) Members</td>
@@ -241,7 +241,7 @@ export default function MpdContent() {
             <tr className="even:bg-gray-50">
               <td className="border border-gray-300 px-3 py-2">List of Parents Teachers Association (PTA) Members</td>
               <td className="border border-gray-300 px-3 py-2 text-center font-semibold text-amber-700"><TBF /></td>
-              <td className="border border-gray-300 px-3 py-2 text-gray-400 text-xs">Upload PTA member list</td>
+              <td className="border border-gray-300 px-3 py-2 text-gray-500 text-xs">Upload PTA member list</td>
             </tr>
           </tbody>
         </table>
@@ -294,7 +294,7 @@ export default function MpdContent() {
                 ))}
                 {RESULTS_2023_X.map((src, i) => (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img key={`print-${i}`} src={src} alt={`Class X 2023 Result ${i + 1}`} className="hidden print:block w-full h-auto border border-gray-200" />
+                  <img key={`print-${i}`} src={src} alt={`Class X 2023 Result ${i + 1}`} className="hidden print:block w-full h-auto border border-gray-200" loading="lazy" />
                 ))}
               </div>
             </div>
@@ -309,7 +309,7 @@ export default function MpdContent() {
                 ))}
                 {RESULTS_2023_XII.map((src, i) => (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img key={`print-${i}`} src={src} alt={`Class XII 2023 Result ${i + 1}`} className="hidden print:block w-full h-auto border border-gray-200" />
+                  <img key={`print-${i}`} src={src} alt={`Class XII 2023 Result ${i + 1}`} className="hidden print:block w-full h-auto border border-gray-200" loading="lazy" />
                 ))}
               </div>
             </div>
@@ -329,7 +329,7 @@ export default function MpdContent() {
               ))}
               {RESULTS_2025_X.map((src, i) => (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img key={`print-${i}`} src={src} alt={`Class X 2025 Result ${i + 1}`} className="hidden print:block w-full h-auto border border-gray-200" />
+                <img key={`print-${i}`} src={src} alt={`Class X 2025 Result ${i + 1}`} className="hidden print:block w-full h-auto border border-gray-200" loading="lazy" />
               ))}
             </div>
             <p className="text-xs text-amber-700 mt-2">Class XII 2025 results — <TBF /></p>
@@ -405,7 +405,7 @@ export default function MpdContent() {
           ["HOSTEL FACILITY", "NO"],
         ]} />
 
-        <div className="mt-10 pt-6 border-t border-gray-300 text-center text-xs text-gray-400">
+        <div className="mt-10 pt-6 border-t border-gray-300 text-center text-xs text-gray-500">
           <p>This disclosure is as per CBSE Affiliation Bye-Laws, Appendix-IX. Last updated: May 2026.</p>
           <p className="mt-1">
             <Link href="/" className="inline-block py-3 text-gray-500 hover:text-gray-700 underline no-print">← Back to School Website</Link>

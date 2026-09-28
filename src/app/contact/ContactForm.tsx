@@ -69,7 +69,7 @@ export default function ContactForm() {
         <button
           onClick={() => setStatus("idle")}
           className="mt-6 text-sm underline"
-          style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+          style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
         >
           Send another message
         </button>
@@ -81,11 +81,12 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <label className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
+          <label htmlFor="contact-name" className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
             Your Name *
           </label>
           <input
             type="text"
+            id="contact-name"
             name="name"
             autoComplete="name"
             value={form.name}
@@ -97,11 +98,12 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
+          <label htmlFor="contact-email" className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
             Email Address *
           </label>
           <input
             type="email"
+            id="contact-email"
             name="email"
             autoComplete="email"
             value={form.email}
@@ -116,11 +118,12 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <label className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
+          <label htmlFor="contact-phone" className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
             Phone Number
           </label>
           <input
             type="tel"
+            id="contact-phone"
             name="phone"
             autoComplete="tel"
             inputMode="tel"
@@ -132,10 +135,11 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
+          <label htmlFor="contact-subject" className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
             Subject
           </label>
           <select
+            id="contact-subject"
             name="subject"
             value={form.subject}
             onChange={handleChange}
@@ -153,10 +157,11 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
+        <label htmlFor="contact-message" className="block text-xs uppercase tracking-widest font-semibold mb-2" style={labelStyle}>
           Message *
         </label>
         <textarea
+          id="contact-message"
           name="message"
           value={form.message}
           onChange={handleChange}

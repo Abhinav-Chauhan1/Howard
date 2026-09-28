@@ -79,7 +79,7 @@ export default function QuotePull({ quote, attribution, dark = false }: QuotePul
             className="text-sm tracking-wider"
             style={{
               fontFamily: "var(--font-heading)",
-              color: dark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.45)",
+              color: dark ? "rgba(255,255,255,0.75)" : "rgba(0,0,0,0.65)",
             }}
           >
             {attribution}

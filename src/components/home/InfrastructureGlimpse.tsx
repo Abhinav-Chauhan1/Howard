@@ -60,7 +60,7 @@ export default function InfrastructureGlimpse() {
                 transform: hoveredIndex === 0 ? "translateY(0)" : "translateY(8px)",
               }}
             >
-              <span className="text-white text-xs font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
+              <span className="text-[var(--on-accent)] text-xs font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
                 {BENTO[0].label}
               </span>
             </div>
@@ -93,7 +93,7 @@ export default function InfrastructureGlimpse() {
                   transform: hoveredIndex === i + 1 ? "translateY(0)" : "translateY(6px)",
                 }}
               >
-                <span className="text-white text-xs font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
+                <span className="text-[var(--on-accent)] text-xs font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
                   {item.label}
                 </span>
               </div>

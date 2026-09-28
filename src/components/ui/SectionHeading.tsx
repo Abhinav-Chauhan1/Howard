@@ -17,8 +17,8 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   const textAlign = align === "center" ? "text-center items-center" : "items-start";
   const textColor = light ? "text-white" : "text-[var(--text)]";
-  const labelColor = light ? "text-[var(--accent)]" : "text-[var(--accent)]";
-  const subtitleColor = light ? "text-white/60" : "text-[var(--text)]/60";
+  const labelColor = light ? "text-[var(--accent-soft)]" : "text-[var(--accent-ink)]";
+  const subtitleColor = light ? "text-white/75" : "text-[var(--text)]/70";
 
   return (
     <div className={`flex flex-col gap-3 ${textAlign} ${className}`}>

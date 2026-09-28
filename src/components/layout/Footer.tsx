@@ -41,7 +41,7 @@ export default function Footer() {
               <span className="font-semibold text-base block text-[var(--text)]" style={{ fontFamily: "var(--font-heading)" }}>
                 Howard Convent
               </span>
-              <span className="text-xs tracking-wider uppercase block mt-0.5 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>
+              <span className="text-xs tracking-wider uppercase block mt-0.5 text-[var(--text)]/70" style={{ fontFamily: "var(--font-heading)" }}>
                 Sr. Sec. School
               </span>
             </div>
@@ -54,7 +54,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-semibold tracking-wide transition-all hover:brightness-90"
-                style={{ backgroundColor: "var(--accent)", color: "white", fontFamily: "var(--font-heading)" }}
+                style={{ backgroundColor: "var(--accent)", color: "var(--on-accent)", fontFamily: "var(--font-heading)" }}
               >
                 WhatsApp Us
               </a>
@@ -65,7 +65,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${SCHOOL.shortName} on ${label}`}
-                  className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-[var(--text)]/20 text-[var(--text)]/75 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors"
+                  className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-[var(--text)]/20 text-[var(--text)]/75 hover:text-[var(--accent-ink)] hover:border-[var(--accent)] transition-colors"
                 >
                   <Icon />
                 </a>
@@ -75,9 +75,9 @@ export default function Footer() {
 
           {/* Col 2: Quick Links */}
           <div>
-            <h4 className="text-xs tracking-widest uppercase mb-6 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>
+            <h2 className="text-xs tracking-widest uppercase mb-6 text-[var(--text)]/70" style={{ fontFamily: "var(--font-heading)" }}>
               Quick Links
-            </h4>
+            </h2>
             <ul className="flex flex-col gap-0.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -95,9 +95,9 @@ export default function Footer() {
 
           {/* Col 3: Academics */}
           <div>
-            <h4 className="text-xs tracking-widest uppercase mb-6 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>
+            <h2 className="text-xs tracking-widest uppercase mb-6 text-[var(--text)]/70" style={{ fontFamily: "var(--font-heading)" }}>
               Academics
-            </h4>
+            </h2>
             <ul className="flex flex-col gap-0.5">
               {academicLinks.map((link) => (
                 <li key={link.href}>
@@ -115,12 +115,12 @@ export default function Footer() {
 
           {/* Col 4: Contact */}
           <div className="col-span-2 lg:col-span-1">
-            <h4 className="text-xs tracking-widest uppercase mb-6 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>
+            <h2 className="text-xs tracking-widest uppercase mb-6 text-[var(--text)]/70" style={{ fontFamily: "var(--font-heading)" }}>
               Contact
-            </h4>
+            </h2>
             <div className="flex flex-col gap-4">
               <div>
-                <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>Address</p>
+                <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/70" style={{ fontFamily: "var(--font-heading)" }}>Address</p>
                 <p className="text-sm leading-relaxed text-[var(--text)]/75" style={{ fontFamily: "var(--font-body)" }}>
                   {SCHOOL.address.line1},<br />
                   {SCHOOL.address.line2},<br />
@@ -128,19 +128,19 @@ export default function Footer() {
                 </p>
               </div>
               <div>
-                <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>Phone</p>
-                <a href={`tel:${SCHOOL.phone}`} className="inline-block py-2 text-sm text-[var(--text)] hover:text-[var(--accent)] transition-colors font-medium break-all" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/70" style={{ fontFamily: "var(--font-heading)" }}>Phone</p>
+                <a href={`tel:${SCHOOL.phone}`} className="inline-block py-2 text-sm text-[var(--text)] hover:text-[var(--accent-ink)] transition-colors font-medium break-all" style={{ fontFamily: "var(--font-body)" }}>
                   {SCHOOL.phone}
                 </a>
               </div>
               <div>
-                <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>Email</p>
-                <a href={`mailto:${SCHOOL.email}`} className="inline-block py-2 text-sm text-[var(--text)] hover:text-[var(--accent)] transition-colors font-medium break-all" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/70" style={{ fontFamily: "var(--font-heading)" }}>Email</p>
+                <a href={`mailto:${SCHOOL.email}`} className="inline-block py-2 text-sm text-[var(--text)] hover:text-[var(--accent-ink)] transition-colors font-medium break-all" style={{ fontFamily: "var(--font-body)" }}>
                   {SCHOOL.email}
                 </a>
               </div>
               <div>
-                <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>Hours</p>
+                <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/70" style={{ fontFamily: "var(--font-heading)" }}>Hours</p>
                 <p className="text-sm text-[var(--text)]/75" style={{ fontFamily: "var(--font-body)" }}>
                   {SCHOOL.hours}
                 </p>
@@ -153,16 +153,16 @@ export default function Footer() {
       {/* Bottom strip */}
       <div className="border-t border-[var(--text)]/10">
         <div className="max-w-screen-xl mx-auto px-6 pt-5 pb-24 sm:pb-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-[var(--text)]/50" style={{ fontFamily: "var(--font-body)" }}>
+          <p className="text-xs text-[var(--text)]/70" style={{ fontFamily: "var(--font-body)" }}>
             © 2026 Howard Convent School
           </p>
-          <p className="text-xs text-[var(--text)]/50" style={{ fontFamily: "var(--font-body)" }}>
+          <p className="text-xs text-[var(--text)]/70" style={{ fontFamily: "var(--font-body)" }}>
             Developed with ❤️ by{" "}
             <a
               href={SCHOOL.builtByUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--text)] hover:text-[var(--accent)] transition-colors font-medium"
+              className="text-[var(--text)] hover:text-[var(--accent-ink)] transition-colors font-medium"
             >
               {SCHOOL.builtBy}
             </a>

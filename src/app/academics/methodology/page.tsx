@@ -141,7 +141,7 @@ export default function MethodologyPage() {
             />
             <p
               className="text-sm tracking-wider"
-              style={{ fontFamily: "var(--font-heading)", color: "var(--text)", opacity: 0.45 }}
+              style={{ fontFamily: "var(--font-heading)", color: "var(--text)", opacity: 0.7 }}
             >
               — Benjamin Franklin
             </p>

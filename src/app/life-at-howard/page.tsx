@@ -76,19 +76,19 @@ export default function LifeAtHowardPage() {
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-8">
                   <h3
-                    className="text-white text-3xl font-normal mb-2 group-hover:text-[var(--accent)] transition-colors"
+                    className="text-white text-3xl font-normal mb-2 group-hover:text-[var(--accent-ink)] transition-colors"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     {cat.title}
                   </h3>
                   <p
-                    className="text-white/60 text-sm"
+                    className="text-white/75 text-sm"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {cat.description}
                   </p>
                   <span
-                    className="inline-block mt-4 text-[var(--accent)] text-xs tracking-widest uppercase font-semibold transition-all group-hover:translate-x-1"
+                    className="inline-block mt-4 text-[var(--accent-ink)] text-xs tracking-widest uppercase font-semibold transition-all group-hover:translate-x-1"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     Explore →

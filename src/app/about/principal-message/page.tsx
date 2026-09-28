@@ -35,15 +35,15 @@ export default function PrincipalMessagePage() {
                   className="object-cover object-top"
                 />
               </div>
-              <h3
-                className="text-xl font-normal mb-1"
+              <p
+                className="text-xl font-normal mb-1 leading-tight"
                 style={{ fontFamily: "var(--font-display)", color: "var(--text)" }}
               >
                 Mrs. Renu Vishnoi
-              </h3>
+              </p>
               <p
                 className="text-sm"
-                style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+                style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
               >
                 Howard Convent Sr. Sec. School
               </p>
@@ -53,7 +53,7 @@ export default function PrincipalMessagePage() {
             <div>
               <span
                 className="text-xs tracking-[0.2em] uppercase font-semibold mb-4 block"
-                style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+                style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
               >
                 A Message From The Principal
               </span>
@@ -131,7 +131,7 @@ export default function PrincipalMessagePage() {
                 </p>
                 <p
                   className="text-sm"
-                  style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.6 }}
+                  style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}
                 >
                   Howard Convent Sr. Sec. School, Kanth
                 </p>

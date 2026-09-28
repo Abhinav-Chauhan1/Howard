@@ -181,7 +181,7 @@ export default function CurriculumPage() {
                 <div className="space-y-2">
                   <p
                     className="text-xs uppercase tracking-widest font-semibold mb-3"
-                    style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+                    style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
                   >
                     Subjects
                   </p>

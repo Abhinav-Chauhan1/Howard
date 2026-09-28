@@ -71,7 +71,7 @@ export default function LifeAtHowardScroll() {
       {/* Section label — desktop only */}
       <div className="hidden md:block absolute top-8 left-8 z-20">
         <span
-          className="text-white/30 text-xs tracking-[0.2em] uppercase"
+          className="text-white/75 text-xs tracking-[0.2em] uppercase"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           Life at Howard
@@ -82,7 +82,7 @@ export default function LifeAtHowardScroll() {
       <div className="md:hidden">
         <div className="px-6 pt-20 pb-6">
           <span
-            className="text-[var(--accent)] text-xs tracking-[0.2em] uppercase font-semibold mb-3 block"
+            className="text-[var(--accent-soft)] text-xs tracking-[0.2em] uppercase font-semibold mb-3 block"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Life at Howard
@@ -155,7 +155,7 @@ export default function LifeAtHowardScroll() {
                 {panel.title}
               </h2>
               <p
-                className="text-white/60 max-w-md text-lg"
+                className="text-white/75 max-w-md text-lg"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {panel.description}

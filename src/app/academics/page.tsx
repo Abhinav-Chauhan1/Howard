@@ -91,7 +91,7 @@ export default function AcademicsPage() {
                   </div>
                   <span
                     className="text-2xl font-bold"
-                    style={{ fontFamily: "var(--font-heading)", color: "var(--muted)" }}
+                    style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>

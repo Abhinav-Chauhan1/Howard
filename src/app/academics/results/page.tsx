@@ -54,7 +54,7 @@ export default function ResultsPage() {
                 </p>
                 <p
                   className="text-xs uppercase tracking-wider"
-                  style={{ fontFamily: "var(--font-heading)", color: "var(--text)", opacity: 0.6 }}
+                  style={{ fontFamily: "var(--font-heading)", color: "var(--text)", opacity: 0.7 }}
                 >
                   {item.label}
                 </p>
@@ -106,7 +106,7 @@ export default function ResultsPage() {
                         <td
                           key={j}
                           className="px-5 py-4 text-sm italic"
-                          style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.45 }}
+                          style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}
                         >
                           {v}
                         </td>
@@ -159,14 +159,14 @@ export default function ResultsPage() {
                         <td className="px-5 py-3 font-semibold text-sm" style={{ fontFamily: "var(--font-heading)", color: "var(--text)" }}>
                           {j === 0 ? year : ""}
                         </td>
-                        <td className="px-5 py-3 text-sm" style={{ fontFamily: "var(--font-body)", color: "var(--accent)" }}>
+                        <td className="px-5 py-3 text-sm" style={{ fontFamily: "var(--font-body)", color: "var(--accent-ink)" }}>
                           {stream}
                         </td>
                         {["—", "—", "—"].map((v, k) => (
                           <td
                             key={k}
                             className="px-5 py-3 text-sm italic"
-                            style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.45 }}
+                            style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}
                           >
                             {v}
                           </td>

@@ -53,7 +53,7 @@ export default function AdmissionPage() {
                     style={{ borderColor: "var(--muted)", backgroundColor: "var(--bg)" }}
                   >
                     <span
-                      className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                      className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-[var(--on-accent)]"
                       style={{ backgroundColor: "var(--accent)", fontFamily: "var(--font-heading)" }}
                     >
                       {i + 1}
@@ -97,7 +97,7 @@ export default function AdmissionPage() {
           </div>
           <p
             className="text-sm mt-6"
-            style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.5 }}
+            style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}
           >
             Office Hours: {SCHOOL.hours}
           </p>
