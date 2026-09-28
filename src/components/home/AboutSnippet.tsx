@@ -60,11 +60,12 @@ export default function AboutSnippet() {
       <div className="max-w-screen-xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
-          <div ref={imgRef} className="relative h-[500px] lg:h-[600px] overflow-hidden rounded-sm">
+          <div ref={imgRef} className="relative h-80 sm:h-[500px] lg:h-[600px] overflow-hidden rounded-sm">
             <Image
               src={IMAGES.about}
               alt="Students at Howard Convent School"
               fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
             />
             <div
@@ -103,7 +104,7 @@ export default function AboutSnippet() {
               has been a beacon of academic excellence, shaping young minds into responsible, enlightened citizens.
             </p>
 
-            <div className="reveal grid grid-cols-2 gap-5 mb-8">
+            <div className="reveal grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-8">
               <div
                 className="p-4 border"
                 style={{ borderColor: "var(--muted)", backgroundColor: "var(--muted)" }}

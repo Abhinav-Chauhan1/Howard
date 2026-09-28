@@ -4,7 +4,7 @@ import { useState } from "react";
 import Button from "@/components/ui/Button";
 
 const inputClass =
-  "w-full px-4 py-3 border text-sm outline-none focus:border-[var(--accent)] transition-colors";
+  "w-full px-4 py-3 border text-base md:text-sm outline-none focus:border-[var(--accent)] transition-colors";
 const inputStyle = {
   borderColor: "var(--muted)",
   backgroundColor: "var(--bg)",
@@ -87,6 +87,7 @@ export default function ContactForm() {
           <input
             type="text"
             name="name"
+            autoComplete="name"
             value={form.name}
             onChange={handleChange}
             required
@@ -102,6 +103,7 @@ export default function ContactForm() {
           <input
             type="email"
             name="email"
+            autoComplete="email"
             value={form.email}
             onChange={handleChange}
             required
@@ -120,6 +122,8 @@ export default function ContactForm() {
           <input
             type="tel"
             name="phone"
+            autoComplete="tel"
+            inputMode="tel"
             value={form.phone}
             onChange={handleChange}
             placeholder="+91 XXXXX XXXXX"

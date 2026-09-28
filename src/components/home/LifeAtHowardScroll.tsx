@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -95,9 +96,10 @@ export default function LifeAtHowardScroll() {
         </div>
         <div className="flex flex-col">
           {PANELS.map((panel, i) => (
-            <div
+            <Link
               key={i}
-              className="relative h-80 overflow-hidden"
+              href={panel.href}
+              className="relative block h-72 overflow-hidden"
             >
               <Image src={panel.image} alt={panel.title} fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.55)" }} />
@@ -109,13 +111,19 @@ export default function LifeAtHowardScroll() {
                   {panel.title}
                 </h3>
                 <p
-                  className="text-white/60 text-sm"
+                  className="text-white/75 text-sm"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {panel.description}
                 </p>
+                <span
+                  className="mt-3 text-[var(--accent)] text-xs tracking-[0.15em] uppercase font-semibold"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  Explore →
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -123,9 +131,10 @@ export default function LifeAtHowardScroll() {
       {/* Desktop: horizontal scroll */}
       <div ref={trackRef} className="hidden md:flex h-screen">
         {PANELS.map((panel, i) => (
-          <div
+          <Link
             key={i}
-            className="panel relative flex-shrink-0 w-screen h-screen overflow-hidden"
+            href={panel.href}
+            className="panel relative block flex-shrink-0 w-screen h-screen overflow-hidden"
           >
             <Image src={panel.image} alt={panel.title} fill sizes="100vw" className="object-cover" />
             <div
@@ -152,7 +161,7 @@ export default function LifeAtHowardScroll() {
                 {panel.description}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

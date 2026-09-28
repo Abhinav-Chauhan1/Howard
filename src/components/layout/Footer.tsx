@@ -29,11 +29,11 @@ export default function Footer() {
   if (pathname === "/mandatory-public-disclosure") return null;
   return (
     <footer style={{ backgroundColor: "var(--muted)" }}>
-      <div className="max-w-screen-xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-screen-xl mx-auto px-6 py-14 md:py-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
 
           {/* Col 1: Logo + tagline */}
-          <div className="lg:col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <div className="mb-5">
               <div className="relative w-20 h-20 mb-4">
                 <Image src="/logo.png" alt={SCHOOL.shortName} fill sizes="80px" className="object-contain" />
@@ -53,7 +53,7 @@ export default function Footer() {
                 href={SCHOOL.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all hover:brightness-90"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-semibold tracking-wide transition-all hover:brightness-90"
                 style={{ backgroundColor: "var(--accent)", color: "white", fontFamily: "var(--font-heading)" }}
               >
                 WhatsApp Us
@@ -65,7 +65,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${SCHOOL.shortName} on ${label}`}
-                  className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--text)]/20 text-[var(--text)]/75 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors"
+                  className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-[var(--text)]/20 text-[var(--text)]/75 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors"
                 >
                   <Icon />
                 </a>
@@ -78,12 +78,12 @@ export default function Footer() {
             <h4 className="text-xs tracking-widest uppercase mb-6 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>
               Quick Links
             </h4>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-0.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[var(--text)]/75 hover:text-[var(--text)] transition-colors"
+                    className="inline-block py-2 text-sm text-[var(--text)]/75 hover:text-[var(--text)] transition-colors"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {link.label}
@@ -98,12 +98,12 @@ export default function Footer() {
             <h4 className="text-xs tracking-widest uppercase mb-6 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>
               Academics
             </h4>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-0.5">
               {academicLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[var(--text)]/75 hover:text-[var(--text)] transition-colors"
+                    className="inline-block py-2 text-sm text-[var(--text)]/75 hover:text-[var(--text)] transition-colors"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {link.label}
@@ -114,7 +114,7 @@ export default function Footer() {
           </div>
 
           {/* Col 4: Contact */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <h4 className="text-xs tracking-widest uppercase mb-6 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>
               Contact
             </h4>
@@ -129,13 +129,13 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>Phone</p>
-                <a href={`tel:${SCHOOL.phone}`} className="text-sm text-[var(--text)] hover:text-[var(--accent)] transition-colors font-medium" style={{ fontFamily: "var(--font-body)" }}>
+                <a href={`tel:${SCHOOL.phone}`} className="inline-block py-2 text-sm text-[var(--text)] hover:text-[var(--accent)] transition-colors font-medium break-all" style={{ fontFamily: "var(--font-body)" }}>
                   {SCHOOL.phone}
                 </a>
               </div>
               <div>
                 <p className="text-xs tracking-wide uppercase mb-1 text-[var(--text)]/50" style={{ fontFamily: "var(--font-heading)" }}>Email</p>
-                <a href={`mailto:${SCHOOL.email}`} className="text-sm text-[var(--text)] hover:text-[var(--accent)] transition-colors font-medium" style={{ fontFamily: "var(--font-body)" }}>
+                <a href={`mailto:${SCHOOL.email}`} className="inline-block py-2 text-sm text-[var(--text)] hover:text-[var(--accent)] transition-colors font-medium break-all" style={{ fontFamily: "var(--font-body)" }}>
                   {SCHOOL.email}
                 </a>
               </div>
@@ -152,7 +152,7 @@ export default function Footer() {
 
       {/* Bottom strip */}
       <div className="border-t border-[var(--text)]/10">
-        <div className="max-w-screen-xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-screen-xl mx-auto px-6 pt-5 pb-24 sm:pb-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[var(--text)]/50" style={{ fontFamily: "var(--font-body)" }}>
             © 2026 Howard Convent School
           </p>

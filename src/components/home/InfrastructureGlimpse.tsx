@@ -49,11 +49,11 @@ export default function InfrastructureGlimpse() {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div
-              className="absolute inset-0 transition-opacity duration-300"
+              className="touch-clear absolute inset-0 transition-opacity duration-300"
               style={{ background: "rgba(0,0,0,0.4)", opacity: hoveredIndex === 0 ? 1 : 0 }}
             />
             <div
-              className="absolute bottom-4 left-4 px-3 py-1.5 transition-all duration-300"
+              className="touch-reveal absolute bottom-4 left-4 px-3 py-1.5 transition-all duration-300"
               style={{
                 backgroundColor: "var(--accent)",
                 opacity: hoveredIndex === 0 ? 1 : 0,
@@ -82,11 +82,11 @@ export default function InfrastructureGlimpse() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div
-                className="absolute inset-0 transition-opacity duration-300"
+                className="touch-clear absolute inset-0 transition-opacity duration-300"
                 style={{ background: "rgba(0,0,0,0.4)", opacity: hoveredIndex === i + 1 ? 1 : 0 }}
               />
               <div
-                className="absolute bottom-3 left-3 px-2.5 py-1 transition-all duration-300"
+                className="touch-reveal absolute bottom-3 left-3 px-2.5 py-1 transition-all duration-300"
                 style={{
                   backgroundColor: "var(--accent)",
                   opacity: hoveredIndex === i + 1 ? 1 : 0,

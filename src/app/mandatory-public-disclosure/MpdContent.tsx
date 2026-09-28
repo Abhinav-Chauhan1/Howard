@@ -138,7 +138,7 @@ export default function MpdContent() {
         </div>
       )}
 
-      <div className="max-w-5xl mx-auto px-4 py-8 print:px-0 print:py-0" style={{ fontFamily: "var(--font-body)" }}>
+      <div className="max-w-5xl mx-auto px-4 py-8 print:px-0 print:py-0 [&_td]:[overflow-wrap:anywhere] [&_th]:[overflow-wrap:anywhere]" style={{ fontFamily: "var(--font-body)" }}>
 
         <div className="no-print flex justify-end mb-12">
           <button
@@ -408,7 +408,7 @@ export default function MpdContent() {
         <div className="mt-10 pt-6 border-t border-gray-300 text-center text-xs text-gray-400">
           <p>This disclosure is as per CBSE Affiliation Bye-Laws, Appendix-IX. Last updated: May 2026.</p>
           <p className="mt-1">
-            <Link href="/" className="text-gray-500 hover:text-gray-700 underline no-print">← Back to School Website</Link>
+            <Link href="/" className="inline-block py-3 text-gray-500 hover:text-gray-700 underline no-print">← Back to School Website</Link>
           </p>
         </div>
       </div>

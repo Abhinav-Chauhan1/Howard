@@ -30,10 +30,10 @@ export default function Navbar() {
           borderBottom: scrolled ? "1px solid var(--muted)" : "none",
         }}
       >
-        <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-4">
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6 py-2.5 md:py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-14 h-14 flex-shrink-0 relative">
+            <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 relative rounded-full bg-white shadow-sm">
               <Image
                 src="/logo.png"
                 alt={SCHOOL.shortName}
@@ -58,11 +58,11 @@ export default function Navbar() {
           </Link>
 
           {/* Right */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             {/* Admissions badge */}
             <Link
               href="/admissions"
-              className="hidden sm:flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all hover:brightness-90"
+              className="flex items-center gap-2 px-4 py-3 sm:py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all hover:brightness-90"
               style={{
                 backgroundColor: "var(--accent)",
                 color: "white",
@@ -70,14 +70,15 @@ export default function Navbar() {
               }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-              Admissions Open
+              Admissions<span className="hidden sm:inline"> Open</span>
             </Link>
 
             {/* Hamburger */}
             <button
               onClick={() => setMenuOpen(true)}
-              className="flex flex-col gap-1.5 p-2 transition-opacity hover:opacity-70"
+              className="flex flex-col items-center justify-center gap-1.5 w-11 h-11 -mr-2 transition-opacity hover:opacity-70"
               aria-label="Open menu"
+              aria-expanded={menuOpen}
             >
               {[0, 1, 2].map((i) => (
                 <span
