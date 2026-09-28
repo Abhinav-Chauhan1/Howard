@@ -162,8 +162,20 @@
 
   @media (max-width: 768px) {
     .section-spacing {
-      padding-top: 80px;
-      padding-bottom: 80px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+  }
+
+  /* Hover-revealed captions and overlays: touch screens have no hover,
+     so show captions permanently and drop the darkening overlay. */
+  @media (hover: none) {
+    .touch-reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .touch-clear {
+      background: transparent !important;
     }
   }
 
@@ -182,6 +194,14 @@
     opacity: 0.03;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     background-size: 256px 256px;
+  }
+
+  /* A full-screen fixed layer costs compositing on every scroll frame and
+     is invisible at 3% opacity on small screens anyway. */
+  @media (hover: none), (max-width: 768px) {
+    .grain-overlay {
+      display: none;
+    }
   }
 
   .custom-cursor {

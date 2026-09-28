@@ -47,7 +47,7 @@ export default function HeroSection() {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="relative h-screen min-h-[600px] flex flex-col justify-end overflow-hidden">
+    <section ref={sectionRef} className="relative h-svh min-h-[560px] flex flex-col justify-end overflow-hidden">
       {/* Background */}
       <div ref={imgRef} className="absolute inset-0">
         <Image
@@ -101,7 +101,7 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2">
         <span
           className="text-white/30 text-xs tracking-widest uppercase"
           style={{ fontFamily: "var(--font-heading)" }}

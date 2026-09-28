@@ -38,25 +38,25 @@ export default function PageHero({ title, subtitle, image, breadcrumbs }: PageHe
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="relative h-[60vh] min-h-[400px] flex flex-col justify-end overflow-hidden">
+    <section ref={sectionRef} className="relative h-[55svh] md:h-[60vh] min-h-[380px] flex flex-col justify-end overflow-hidden">
       {/* Background */}
       <div ref={imgRef} className="absolute inset-0">
         <Image src={image} alt={title} fill sizes="100vw" className="object-cover" priority />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.55)" }} />
       </div>
 
-      <div className="relative z-10 max-w-screen-xl mx-auto w-full px-6 pb-16 pt-32">
+      <div className="relative z-10 max-w-screen-xl mx-auto w-full px-6 pb-12 md:pb-16 pt-28 md:pt-32">
         {/* Breadcrumb */}
         {breadcrumbs && (
-          <nav className="flex items-center gap-2 mb-4 text-white/40 text-xs" style={{ fontFamily: "var(--font-heading)" }}>
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-x-2 mb-2 text-white/60 text-xs" style={{ fontFamily: "var(--font-heading)" }}>
+            <Link href="/" className="py-3 hover:text-white transition-colors">Home</Link>
             {breadcrumbs.map((crumb, i) => (
               <span key={i} className="flex items-center gap-2">
                 <span>/</span>
                 {i === breadcrumbs.length - 1 ? (
                   <span className="text-[var(--accent)]">{crumb.label}</span>
                 ) : (
-                  <Link href={crumb.href} className="hover:text-white transition-colors">
+                  <Link href={crumb.href} className="py-3 hover:text-white transition-colors">
                     {crumb.label}
                   </Link>
                 )}
@@ -70,7 +70,7 @@ export default function PageHero({ title, subtitle, image, breadcrumbs }: PageHe
 
         <h1
           ref={titleRef}
-          className="text-white text-5xl md:text-7xl font-normal leading-[1.05] mb-4"
+          className="text-white text-[2.5rem] sm:text-5xl md:text-7xl font-normal leading-[1.05] mb-4"
           style={{ fontFamily: "var(--font-display)" }}
         >
           {title}
@@ -78,7 +78,7 @@ export default function PageHero({ title, subtitle, image, breadcrumbs }: PageHe
         {subtitle && (
           <p
             ref={subRef}
-            className="text-white/60 text-lg max-w-xl"
+            className="text-white/75 text-base md:text-lg max-w-xl"
             style={{ fontFamily: "var(--font-body)" }}
           >
             {subtitle}

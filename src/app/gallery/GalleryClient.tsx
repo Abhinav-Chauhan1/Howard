@@ -58,7 +58,7 @@ export default function GalleryClient() {
                   setLightboxIndex(null);
                 }}
                 aria-pressed={activeFilter === filter}
-                className="px-5 py-2 text-sm font-medium transition-all"
+                className="px-5 py-2.5 text-sm font-medium transition-all"
                 style={{
                   fontFamily: "var(--font-heading)",
                   backgroundColor: activeFilter === filter ? "var(--deep)" : "var(--muted)",
@@ -88,7 +88,7 @@ export default function GalleryClient() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3"
+                    className="touch-reveal touch-clear absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3"
                     style={{ background: "rgba(0,0,0,0.4)" }}
                   >
                     <span
