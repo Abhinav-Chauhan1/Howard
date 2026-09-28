@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Button from "@/components/ui/Button";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -62,7 +62,7 @@ export default function AboutSnippet() {
           {/* Image */}
           <div ref={imgRef} className="relative h-[500px] lg:h-[600px] overflow-hidden rounded-sm">
             <Image
-              src={UNSPLASH_IMAGES.about}
+              src={IMAGES.about}
               alt="Students at Howard Convent School"
               fill
               className="object-cover"

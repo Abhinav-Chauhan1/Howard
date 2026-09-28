@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Co-curricular Activities",
+  title: { absolute: "Co-curricular Activities | Howard Convent School, Kanth" },
+  alternates: { canonical: "/life-at-howard/activities" },
   description: "Clubs, competitions, community service, and enrichment activities at Howard Convent Sr. Sec. School.",
 };
 
@@ -24,7 +25,7 @@ export default function ActivitiesPage() {
       <PageHero
         title="Co-curricular Activities"
         subtitle="Learning that goes far beyond the textbook."
-        image={UNSPLASH_IMAGES.activities}
+        image={IMAGES.activities}
         breadcrumbs={[
           { label: "Life at Howard", href: "/life-at-howard" },
           { label: "Activities", href: "/life-at-howard/activities" },
@@ -66,13 +67,13 @@ export default function ActivitiesPage() {
           {/* Photo grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              UNSPLASH_IMAGES.activities,
-              UNSPLASH_IMAGES.gallery2,
-              UNSPLASH_IMAGES.gallery5,
-              UNSPLASH_IMAGES.gallery8,
-            ].map((img, i) => (
-              <div key={i} className="relative h-48 overflow-hidden rounded-sm">
-                <Image src={img} alt={`Activity ${i + 1}`} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
+              { src: IMAGES.activities, alt: "Students holding up their integrity posters in the school hall" },
+              { src: IMAGES.council, alt: "Teacher presenting a certificate to a student at the school entrance" },
+              { src: IMAGES.diya2, alt: "Students lighting diyas arranged on the floor" },
+              { src: IMAGES.posterGroup2, alt: "Group of students with their posters outside the school" },
+            ].map((img) => (
+              <div key={img.src} className="relative h-48 overflow-hidden rounded-sm">
+                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
               </div>
             ))}
           </div>

@@ -3,30 +3,25 @@
 import { useState } from "react";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 const GALLERY_ITEMS = [
-  { src: UNSPLASH_IMAGES.campus1, label: "Main Campus", category: "Campus" },
-  { src: UNSPLASH_IMAGES.library, label: "Library", category: "Campus" },
-  { src: UNSPLASH_IMAGES.lab, label: "Science Lab", category: "Academics" },
-  { src: UNSPLASH_IMAGES.classroom, label: "Classroom", category: "Academics" },
-  { src: UNSPLASH_IMAGES.sports, label: "Sports Day", category: "Sports" },
-  { src: UNSPLASH_IMAGES.playground, label: "Playground", category: "Sports" },
-  { src: UNSPLASH_IMAGES.pool, label: "Swimming Pool", category: "Sports" },
-  { src: UNSPLASH_IMAGES.arts, label: "Cultural Event", category: "Events" },
-  { src: UNSPLASH_IMAGES.activities, label: "Co-curricular", category: "Events" },
-  { src: UNSPLASH_IMAGES.council, label: "Students Council", category: "Events" },
-  { src: UNSPLASH_IMAGES.campus2, label: "School Building", category: "Campus" },
-  { src: UNSPLASH_IMAGES.campus3, label: "Campus View", category: "Campus" },
-  { src: UNSPLASH_IMAGES.office, label: "Reception & Office", category: "Campus" },
-  { src: UNSPLASH_IMAGES.gallery1, label: "Student Activity", category: "Events" },
-  { src: UNSPLASH_IMAGES.gallery2, label: "Sports Event", category: "Sports" },
-  { src: UNSPLASH_IMAGES.gallery3, label: "Class Room", category: "Academics" },
-  { src: UNSPLASH_IMAGES.gallery4, label: "Campus", category: "Campus" },
-  { src: UNSPLASH_IMAGES.gallery5, label: "School Day", category: "Events" },
-  { src: UNSPLASH_IMAGES.gallery6, label: "Sports", category: "Sports" },
-  { src: UNSPLASH_IMAGES.gallery7, label: "Arts Show", category: "Events" },
-  { src: UNSPLASH_IMAGES.gallery8, label: "Activity", category: "Events" },
+  { src: IMAGES.campus1, label: "Main Campus", category: "Campus", alt: "Main gate and front of Howard Convent School, Kanth" },
+  { src: IMAGES.arts, label: "Poster Making", category: "Events", alt: "Students drawing posters at the Integrity – A Way of Life poster-making competition" },
+  { src: IMAGES.computerLab, label: "Computer Lab", category: "Academics", alt: "Students working at desks in the school computer lab" },
+  { src: IMAGES.campus2, label: "School Building", category: "Campus", alt: "Howard Convent School building with the school name board" },
+  { src: IMAGES.pool, label: "Swimming Pool", category: "Sports", alt: "On-campus swimming pool at Howard Convent School" },
+  { src: IMAGES.activities, label: "Poster Exhibition", category: "Events", alt: "Students holding up their integrity posters in the school hall" },
+  { src: IMAGES.council, label: "Certificate Presentation", category: "Events", alt: "Teacher presenting a certificate to a student at the school entrance" },
+  { src: IMAGES.campus5, label: "Campus Grounds", category: "Sports", alt: "Open grounds and tree-lined lawn on the Howard Convent campus" },
+  { src: IMAGES.classroom, label: "Poster Making", category: "Events", alt: "Students sketching at a long table during the poster-making competition" },
+  { src: IMAGES.diya1, label: "Diya Decoration", category: "Events", alt: "Lit diyas arranged in a pattern on the school floor" },
+  { src: IMAGES.campus3, label: "Campus View", category: "Campus", alt: "Side view of the Howard Convent School building" },
+  { src: IMAGES.about, label: "Young Artists", category: "Events", alt: "Students displaying their posters in front of the Howard Convent School wall" },
+  { src: IMAGES.office, label: "Reception & Office", category: "Campus", alt: "School reception and front office" },
+  { src: IMAGES.posterMaking2, label: "Ideas Taking Shape", category: "Events", alt: "Students colouring their posters during the competition" },
+  { src: IMAGES.diya2, label: "Diya Decoration", category: "Events", alt: "Students lighting diyas arranged on the floor in front of the school backdrop" },
+  { src: IMAGES.posterGroup2, label: "Our Budding Artists", category: "Events", alt: "Group of students with their integrity posters outside the school" },
 ];
 
 const FILTERS = ["All", "Campus", "Events", "Sports", "Academics"];
@@ -45,7 +40,7 @@ export default function GalleryClient() {
       <PageHero
         title="Gallery"
         subtitle="Moments that define the Howard experience."
-        image={UNSPLASH_IMAGES.campus1}
+        image={IMAGES.campus1}
         breadcrumbs={[{ label: "Gallery", href: "/gallery" }]}
       />
 
@@ -79,7 +74,7 @@ export default function GalleryClient() {
                 <div className="relative" style={{ paddingBottom: i % 3 === 0 ? "130%" : i % 3 === 1 ? "75%" : "100%" }}>
                   <Image
                     src={item.src}
-                    alt={item.label}
+                    alt={item.alt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -129,7 +124,7 @@ export default function GalleryClient() {
           >
             <Image
               src={filtered[lightboxIndex].src}
-              alt={filtered[lightboxIndex].label}
+              alt={filtered[lightboxIndex].alt}
               width={1200}
               height={800}
               className="object-contain w-full h-full max-h-[85vh]"

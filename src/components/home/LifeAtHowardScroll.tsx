@@ -5,7 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -13,25 +13,25 @@ const PANELS = [
   {
     title: "Athletics & Sports",
     description: "A comprehensive sports program building physical excellence, teamwork, and competitive spirit in our students.",
-    image: UNSPLASH_IMAGES.sports,
+    image: IMAGES.sports,
     href: "/life-at-howard/sports",
   },
   {
     title: "Performing Arts & Music",
     description: "Creative expression through dance, drama, music, and fine arts — nurturing the artistic soul of every student.",
-    image: UNSPLASH_IMAGES.arts,
+    image: IMAGES.arts,
     href: "/life-at-howard/arts",
   },
   {
     title: "Co-curricular Activities",
     description: "Clubs, competitions, community service, and enrichment activities that broaden students' horizons beyond academics.",
-    image: UNSPLASH_IMAGES.activities,
+    image: IMAGES.activities,
     href: "/life-at-howard/activities",
   },
   {
     title: "Students Council",
     description: "Student-led governance cultivating leadership, responsibility, and democratic values from an early age.",
-    image: UNSPLASH_IMAGES.council,
+    image: IMAGES.council,
     href: "/life-at-howard/council",
   },
 ];

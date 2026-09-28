@@ -7,8 +7,7 @@ import GrainOverlay from "@/components/layout/GrainOverlay";
 import CustomCursor from "@/components/layout/CustomCursor";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import { SCHOOL } from "@/lib/constants";
-
-const BASE_URL = "https://www.howardconventschool.in";
+import { BASE_URL, BASE_OPEN_GRAPH, OG_IMAGE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -19,22 +18,10 @@ export const metadata: Metadata = {
   description:
     "Howard Convent Sr. Sec. School is a CBSE-affiliated senior secondary school in Kanth, Moradabad, Uttar Pradesh. Offering Science, Commerce, and Humanities streams with holistic education.",
   keywords: ["Howard Convent", "CBSE school Moradabad", "school Kanth", "senior secondary school UP"],
-  openGraph: {
-    siteName: SCHOOL.name,
-    type: "website",
-    url: BASE_URL,
-    images: [
-      {
-        url: "/logo.png",
-        width: 400,
-        height: 400,
-        alt: "Howard Convent Sr. Sec. School",
-      },
-    ],
-  },
+  openGraph: BASE_OPEN_GRAPH,
   twitter: {
-    card: "summary",
-    images: ["/logo.png"],
+    card: "summary_large_image",
+    images: [OG_IMAGE.url],
   },
 };
 
@@ -65,7 +52,7 @@ const schoolSchema = {
       closes: "16:00",
     },
   ],
-  sameAs: [],
+  sameAs: [SCHOOL.facebook, SCHOOL.instagram],
 };
 
 const websiteSchema = {
@@ -81,7 +68,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
           rel="stylesheet"

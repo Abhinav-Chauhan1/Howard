@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Performing Arts & Music",
+  title: { absolute: "Performing Arts & Music | Howard Convent School, Kanth" },
+  alternates: { canonical: "/life-at-howard/arts" },
   description: "Creative expression through dance, drama, music, and visual arts at Howard Convent Sr. Sec. School.",
 };
 
@@ -26,7 +27,7 @@ export default function ArtsPage() {
       <PageHero
         title="Performing Arts & Music"
         subtitle="Where creativity finds its voice."
-        image={UNSPLASH_IMAGES.arts}
+        image={IMAGES.arts}
         breadcrumbs={[
           { label: "Life at Howard", href: "/life-at-howard" },
           { label: "Arts", href: "/life-at-howard/arts" },
@@ -60,9 +61,14 @@ export default function ArtsPage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {[UNSPLASH_IMAGES.arts, UNSPLASH_IMAGES.gallery7, UNSPLASH_IMAGES.activities, UNSPLASH_IMAGES.gallery3].map((img, i) => (
-                <div key={i} className="relative h-48 overflow-hidden rounded-sm">
-                  <Image src={img} alt={`Arts ${i + 1}`} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
+              {[
+                { src: IMAGES.arts, alt: "Students drawing posters at the poster-making competition" },
+                { src: IMAGES.posterMaking2, alt: "Students colouring their posters at a long table" },
+                { src: IMAGES.classroom, alt: "Students sketching during the poster-making competition" },
+                { src: IMAGES.about, alt: "Students displaying their finished posters outside the school" },
+              ].map((img) => (
+                <div key={img.src} className="relative h-48 overflow-hidden rounded-sm">
+                  <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
                 </div>
               ))}
             </div>

@@ -2,17 +2,16 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 
 const BENTO = [
-  { src: UNSPLASH_IMAGES.campus1, label: "Main Campus", large: true },
-  { src: UNSPLASH_IMAGES.library, label: "Library" },
-  { src: UNSPLASH_IMAGES.lab, label: "Science Lab" },
-  { src: UNSPLASH_IMAGES.playground, label: "Playground" },
-  { src: UNSPLASH_IMAGES.classroom, label: "Classrooms" },
+  { src: IMAGES.campus1, label: "Main Campus", large: true },
+  { src: IMAGES.computerLab, label: "Computer Lab" },
+  { src: IMAGES.pool, label: "Swimming Pool" },
+  { src: IMAGES.campus5, label: "Campus Grounds" },
+  { src: IMAGES.office, label: "Reception & Office" },
 ];
 
 export default function InfrastructureGlimpse() {

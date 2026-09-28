@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Academic Methodology | Howard Convent CBSE School, Kanth",
+  title: { absolute: "Academic Methodology | Howard Convent CBSE School, Kanth" },
   description: "Howard Convent's child-centred teaching methodology — how we make learning meaningful, engaging, and effective for every student.",
   alternates: { canonical: "/academics/methodology" },
 };
@@ -48,7 +48,7 @@ export default function MethodologyPage() {
       <PageHero
         title="Academic Methodology"
         subtitle="How we teach is as important as what we teach."
-        image={UNSPLASH_IMAGES.classroom}
+        image={IMAGES.classroom}
         breadcrumbs={[
           { label: "Academics", href: "/academics" },
           { label: "Methodology", href: "/academics/methodology" },

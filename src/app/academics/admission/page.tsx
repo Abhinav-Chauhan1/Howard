@@ -3,10 +3,10 @@ import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Timeline from "@/components/ui/Timeline";
 import Button from "@/components/ui/Button";
-import { SCHOOL, DOCUMENTS_REQUIRED, UNSPLASH_IMAGES } from "@/lib/constants";
+import { SCHOOL, DOCUMENTS_REQUIRED, IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Admission Procedure | Howard Convent CBSE School, Kanth",
+  title: { absolute: "Admission Procedure | Howard Convent CBSE School, Kanth" },
   description: "How to apply for admission at Howard Convent Sr. Sec. School — step-by-step process, documents required, and contact information.",
   alternates: { canonical: "/academics/admission" },
 };
@@ -17,7 +17,7 @@ export default function AdmissionPage() {
       <PageHero
         title="Admission Procedure"
         subtitle="Simple steps to join the Howard family."
-        image={UNSPLASH_IMAGES.campus1}
+        image={IMAGES.campus1}
         breadcrumbs={[
           { label: "Academics", href: "/academics" },
           { label: "Admission", href: "/academics/admission" },

@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AdmissionCTA from "@/components/ui/AdmissionCTA";
 import Button from "@/components/ui/Button";
-import { UNSPLASH_IMAGES, SCHOOL } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About Us — Howard Convent CBSE School, Kanth Moradabad",
+  title: { absolute: "About Us — Howard Convent CBSE School, Kanth Moradabad" },
   description: "Learn about Howard Convent Sr. Sec. School — our history, vision, mission, and philosophy of holistic education in Kanth, Moradabad.",
   alternates: { canonical: "/about" },
 };
@@ -37,7 +36,7 @@ export default function AboutPage() {
       <PageHero
         title="About Howard Convent"
         subtitle="A legacy of learning, character, and community."
-        image={UNSPLASH_IMAGES.about}
+        image={IMAGES.about}
         breadcrumbs={[{ label: "About", href: "/about" }]}
       />
 
@@ -81,7 +80,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[500px] overflow-hidden rounded-sm">
               <Image
-                src={UNSPLASH_IMAGES.campus2}
+                src={IMAGES.campus2}
                 alt="Howard Convent School building"
                 fill
                 className="object-cover"
@@ -132,7 +131,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
             <div className="relative h-80 overflow-hidden rounded-sm">
               <Image
-                src={UNSPLASH_IMAGES.director}
+                src={IMAGES.director}
                 alt="Deepesh Singh, Director"
                 fill
                 className="object-cover object-top"

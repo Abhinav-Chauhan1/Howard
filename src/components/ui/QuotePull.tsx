@@ -69,7 +69,7 @@ export default function QuotePull({ quote, attribution, dark = false }: QuotePul
               color,
             }}
           >
-            "{words}"
+            &ldquo;{words}&rdquo;
           </blockquote>
           <span
             className="block w-16 h-px mx-auto mb-8"

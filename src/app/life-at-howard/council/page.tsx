@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { UNSPLASH_IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Students Council",
+  title: { absolute: "Students Council | Howard Convent School, Kanth" },
+  alternates: { canonical: "/life-at-howard/council" },
   description: "The Students Council at Howard Convent Sr. Sec. School — student-led governance and leadership development.",
 };
 
@@ -22,7 +23,7 @@ export default function CouncilPage() {
       <PageHero
         title="Students Council"
         subtitle="Student leadership, responsibility, and service."
-        image={UNSPLASH_IMAGES.council}
+        image={IMAGES.council}
         breadcrumbs={[
           { label: "Life at Howard", href: "/life-at-howard" },
           { label: "Students Council", href: "/life-at-howard/council" },
