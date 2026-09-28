@@ -97,7 +97,7 @@ function DocRow({ label, available, link, note }: { label: string; available: bo
       </td>
       <td className="border border-gray-300 px-3 py-2 text-sm">
         {link ? (
-          <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900 print:text-blue-800">
+          <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block py-2 text-blue-700 underline hover:text-blue-900 print:text-blue-800">
             View Document ↗
           </a>
         ) : available === null ? (
