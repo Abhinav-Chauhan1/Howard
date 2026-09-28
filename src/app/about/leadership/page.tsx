@@ -45,7 +45,7 @@ export default function LeadershipPage() {
                   />
                 </div>
                 <span
-                  className="text-[var(--accent)] text-xs tracking-widest uppercase font-semibold mb-2"
+                  className="text-[var(--accent-ink)] text-xs tracking-widest uppercase font-semibold mb-2"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {leader.designation}
@@ -58,7 +58,7 @@ export default function LeadershipPage() {
                 </h3>
                 <p
                   className="text-sm leading-relaxed max-w-xs"
-                  style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.6 }}
+                  style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}
                 >
                   {leader.bio}
                 </p>

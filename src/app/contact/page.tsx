@@ -51,7 +51,7 @@ export default function ContactPage() {
                     content: (
                       <a
                         href={`tel:${SCHOOL.phone}`}
-                        className="inline-block py-2 text-[var(--accent)] hover:underline text-sm break-all"
+                        className="inline-block py-2 text-[var(--accent-ink)] hover:underline text-sm break-all"
                         style={{ fontFamily: "var(--font-body)" }}
                       >
                         {SCHOOL.phone}
@@ -64,7 +64,7 @@ export default function ContactPage() {
                     content: (
                       <a
                         href={`mailto:${SCHOOL.email}`}
-                        className="inline-block py-2 text-[var(--accent)] hover:underline text-sm break-all"
+                        className="inline-block py-2 text-[var(--accent-ink)] hover:underline text-sm break-all"
                         style={{ fontFamily: "var(--font-body)" }}
                       >
                         {SCHOOL.email}
@@ -88,7 +88,7 @@ export default function ContactPage() {
                         href={SCHOOL.whatsapp}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block py-2 text-[var(--accent)] hover:underline text-sm break-all"
+                        className="inline-block py-2 text-[var(--accent-ink)] hover:underline text-sm break-all"
                         style={{ fontFamily: "var(--font-body)" }}
                       >
                         Chat with us on WhatsApp →
@@ -106,7 +106,7 @@ export default function ContactPage() {
                             href={href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 py-2.5 text-[var(--accent)] hover:underline text-sm"
+                            className="inline-flex items-center gap-2 py-2.5 text-[var(--accent-ink)] hover:underline text-sm"
                             style={{ fontFamily: "var(--font-body)" }}
                           >
                             <Icon />
@@ -122,7 +122,7 @@ export default function ContactPage() {
                     <div>
                       <p
                         className="text-xs uppercase tracking-widest font-semibold mb-1"
-                        style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+                        style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
                       >
                         {item.label}
                       </p>

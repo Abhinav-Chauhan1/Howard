@@ -5,7 +5,7 @@ import GalleryClient from "./GalleryClient";
 export const metadata: Metadata = {
   title: { absolute: "Photo Gallery | Howard Convent School, Kanth Moradabad" },
   description:
-    "Photo gallery of Howard Convent Sr. Sec. School, Kanth, Moradabad: student achievements, Independence Day and Hindi Diwas celebrations, competitions, parent-teacher meetings and campus.",
+    "Photos from Howard Convent School, Kanth: student awards, Independence Day and Hindi Diwas, competitions, parent-teacher meetings and campus.",
   alternates: { canonical: "/gallery" },
   openGraph: {
     ...BASE_OPEN_GRAPH,

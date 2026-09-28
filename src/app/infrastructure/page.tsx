@@ -52,7 +52,7 @@ export default function InfrastructurePage() {
               />
               <div className="touch-reveal touch-clear absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
                 style={{ background: "rgba(0,0,0,0.4)" }}>
-                <span className="text-white text-sm font-semibold px-3 py-1" style={{ backgroundColor: "var(--accent)", fontFamily: "var(--font-heading)" }}>
+                <span className="text-[var(--on-accent)] text-sm font-semibold px-3 py-1" style={{ backgroundColor: "var(--accent)", fontFamily: "var(--font-heading)" }}>
                   {GALLERY_IMAGES[0].label}
                 </span>
               </div>
@@ -62,7 +62,7 @@ export default function InfrastructurePage() {
                 <Image src={img.src} alt={img.label} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="touch-reveal touch-clear absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3"
                   style={{ background: "rgba(0,0,0,0.4)" }}>
-                  <span className="text-white text-xs font-semibold px-2 py-0.5" style={{ backgroundColor: "var(--accent)", fontFamily: "var(--font-heading)" }}>
+                  <span className="text-[var(--on-accent)] text-xs font-semibold px-2 py-0.5" style={{ backgroundColor: "var(--accent)", fontFamily: "var(--font-heading)" }}>
                     {img.label}
                   </span>
                 </div>

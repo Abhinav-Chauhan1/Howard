@@ -72,10 +72,10 @@ export default function AboutSnippet() {
               className="absolute bottom-6 left-6 px-4 py-3 rounded-sm"
               style={{ backgroundColor: "var(--accent)" }}
             >
-              <p className="text-white text-xs font-semibold tracking-wide" style={{ fontFamily: "var(--font-heading)" }}>
+              <p className="text-[var(--on-accent)] text-xs font-semibold tracking-wide" style={{ fontFamily: "var(--font-heading)" }}>
                 CBSE Affiliated
               </p>
-              <p className="text-white/80 text-xs" style={{ fontFamily: "var(--font-body)" }}>
+              <p className="text-[var(--on-accent)]/80 text-xs" style={{ fontFamily: "var(--font-body)" }}>
                 Kanth, Moradabad, UP
               </p>
             </div>
@@ -85,7 +85,7 @@ export default function AboutSnippet() {
           <div ref={textRef}>
             <span
               className="reveal text-xs tracking-[0.2em] uppercase font-semibold mb-4 block"
-              style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+              style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
             >
               About Us
             </span>
@@ -111,7 +111,7 @@ export default function AboutSnippet() {
               >
                 <span
                   className="text-xs tracking-widest uppercase font-semibold block mb-2"
-                  style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+                  style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
                 >
                   Our Vision
                 </span>
@@ -128,7 +128,7 @@ export default function AboutSnippet() {
               >
                 <span
                   className="text-xs tracking-widest uppercase font-semibold block mb-2"
-                  style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+                  style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
                 >
                   Our Mission
                 </span>

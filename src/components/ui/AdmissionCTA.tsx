@@ -9,7 +9,7 @@ export default function AdmissionCTA() {
     >
       <div className="max-w-screen-xl mx-auto px-6 text-center">
         <span
-          className="text-[var(--accent)] text-xs tracking-[0.2em] uppercase font-semibold mb-4 block"
+          className="text-[var(--accent-soft)] text-xs tracking-[0.2em] uppercase font-semibold mb-4 block"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           Now Enrolling
@@ -21,7 +21,7 @@ export default function AdmissionCTA() {
           Admissions Open {SCHOOL.admissionSession}
         </h2>
         <p
-          className="text-white/60 text-lg mb-10 max-w-xl mx-auto"
+          className="text-white/75 text-lg mb-10 max-w-xl mx-auto"
           style={{ fontFamily: "var(--font-body)" }}
         >
           Join a legacy of excellence. Limited seats available.

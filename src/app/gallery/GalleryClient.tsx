@@ -67,7 +67,7 @@ export default function GalleryClient() {
                 data-cursor
               >
                 {filter}
-                <span style={{ opacity: 0.6, marginLeft: 6 }}>{count(filter)}</span>
+                <span style={{ opacity: 0.75, marginLeft: 6 }}>{count(filter)}</span>
               </button>
             ))}
           </div>
@@ -92,7 +92,7 @@ export default function GalleryClient() {
                     style={{ background: "rgba(0,0,0,0.4)" }}
                   >
                     <span
-                      className="text-white text-xs font-semibold px-2 py-1"
+                      className="text-[var(--on-accent)] text-xs font-semibold px-2 py-1"
                       style={{ backgroundColor: "var(--accent)", fontFamily: "var(--font-heading)" }}
                     >
                       {item.label}
@@ -105,7 +105,7 @@ export default function GalleryClient() {
 
           <p
             className="text-center mt-12 text-sm"
-            style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.45 }}
+            style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}
           >
             New photos are added after every school event
           </p>
@@ -172,7 +172,7 @@ export default function GalleryClient() {
             />
             <div className="absolute bottom-4 left-4">
               <span
-                className="text-white text-sm font-semibold px-3 py-1"
+                className="text-[var(--on-accent)] text-sm font-semibold px-3 py-1"
                 style={{ backgroundColor: "var(--accent)", fontFamily: "var(--font-heading)" }}
               >
                 {filtered[lightboxIndex].label}

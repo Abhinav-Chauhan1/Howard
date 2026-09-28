@@ -6,12 +6,19 @@
   --bg: #fafaf8;
   --text: #1a1a1a;
   --accent: #c8a96e;
+  /* WCAG AA contrast: text placed ON the gold (7.8:1), and gold-toned text
+     on the light backgrounds (5.9:1 on --bg, 4.8:1 on --muted). Plain
+     --accent text is still fine on --deep and on dark photo overlays. */
+  --on-accent: #1a1a1a;
+  --accent-ink: #7a5c1e;
+  /* Small gold text on the dark green (--deep): 5.2:1 */
+  --accent-soft: #d9bf8c;
   --muted: #e8e2d9;
   --deep: #2d5016;
   --white: #ffffff;
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-heading: "Syne", system-ui, sans-serif;
-  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-heading: var(--font-syne), system-ui, sans-serif;
+  --font-body: var(--font-dm-sans), system-ui, sans-serif;
 
   /* Tailwind v4 theme variables — defined here so they resolve even when
      @tailwindcss/postcss doesn't run (e.g. Turbopack dev) */
@@ -262,6 +269,37 @@
     align-items: center;
     justify-content: center;
   }
+}
+
+/* ── Intro animations for above-the-fold heroes. Pure CSS so they start on
+   the first frame, run on the compositor and don't wait for JavaScript.
+   Headlines only move (never start invisible) so they count as painted
+   immediately for Largest Contentful Paint. ── */
+@layer components {
+  .intro-rise {
+    animation: introRise 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+  .intro-fade {
+    animation: introFade 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+  .ken-burns {
+    animation: kenBurns 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+}
+
+@keyframes introRise {
+  from { transform: translateY(28px); }
+  to { transform: none; }
+}
+
+@keyframes introFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
 }
 
 /* ── Keyframes — outside layers is fine, they don't participate in cascade ── */

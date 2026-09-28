@@ -84,7 +84,7 @@ export default function CounselingPage() {
                   style={{ borderColor: "var(--muted)" }}
                 >
                   <div
-                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-[var(--on-accent)]"
                     style={{ backgroundColor: "var(--accent)", fontFamily: "var(--font-heading)" }}
                   >
                     {String(i + 1).padStart(2, "0")}

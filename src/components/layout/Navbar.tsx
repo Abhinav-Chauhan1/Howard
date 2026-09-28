@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -11,6 +11,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -40,7 +41,7 @@ export default function Navbar() {
                 fill
                 sizes="56px"
                 className="object-contain"
-                priority
+                loading="eager"
               />
             </div>
             <span
@@ -62,14 +63,14 @@ export default function Navbar() {
             {/* Admissions badge */}
             <Link
               href="/admissions"
-              className="flex items-center gap-2 px-4 py-3 sm:py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all hover:brightness-90"
+              className="flex items-center gap-2 px-4 py-3 lg:py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all hover:brightness-90"
               style={{
                 backgroundColor: "var(--accent)",
-                color: "white",
+                color: "var(--on-accent)",
                 fontFamily: "var(--font-heading)",
               }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--on-accent)] animate-pulse" />
               Admissions<span className="hidden sm:inline"> Open</span>
             </Link>
 
@@ -94,7 +95,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      <OverlayMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+      <OverlayMenu isOpen={menuOpen} onClose={closeMenu} />
     </>
   );
 }

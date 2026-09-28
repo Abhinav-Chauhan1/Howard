@@ -140,7 +140,7 @@ export default function AboutPage() {
             <div>
               <span
                 className="text-xs tracking-[0.2em] uppercase font-semibold mb-4 block"
-                style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}
+                style={{ fontFamily: "var(--font-heading)", color: "var(--accent-ink)" }}
               >
                 From the Director
               </span>
@@ -174,7 +174,7 @@ export default function AboutPage() {
             >
               Meet Our Leadership
             </h3>
-            <p className="text-sm" style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.6 }}>
+            <p className="text-sm" style={{ fontFamily: "var(--font-body)", color: "var(--text)", opacity: 0.7 }}>
               The visionary team behind Howard Convent&apos;s legacy of excellence.
             </p>
           </div>
